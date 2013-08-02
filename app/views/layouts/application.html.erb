@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% unless current_user.nil? %>
+    Current User = <%= current_user.username %>
+  <% end %>
 
+<%= render partial: "shared/log_in_out" %>
 <%= yield %>
 
 </body>

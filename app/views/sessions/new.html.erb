@@ -1,0 +1,14 @@
+<h1>Log In</h1>
+
+<form action="<%= sessions_url %>" method="post">
+  <label for="username">Username</label>
+  <input type="text" id="username" name="user[username]">
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="user[password]">
+
+  <%= render partial: "shared/csrf" %>
+
+  <input type="submit" value="Log In">
+
+</form>

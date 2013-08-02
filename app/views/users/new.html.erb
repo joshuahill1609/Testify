@@ -1,0 +1,36 @@
+<h1>Sign Up</h1>
+
+<form action="<%= users_url %>" method="post">
+
+  <label for="username">Username</label>
+  <input type="text" id="username" name="user[username]"><br>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="user[password]"><br>
+
+  <label for="password_confirmation">Confirm Password</label>
+  <input type="password" id="password_confirmation"
+         name="user[password_confirmation]"><br><br>
+
+  <label for="first_name">First Name</label>
+  <input type="text" id="first_name" name="user[first_name]">
+
+  <label for="last_name">Last Name</label>
+  <input type="text" id="last_name" name="user[last_name]">
+
+  <label for="email">Email</label>
+  <input type="text" id="email" name="user[email]">
+
+  <label for="school_name">School</label>
+  <input type="text" id="school_name" name="user[school_name]">
+
+  <label for="subject_taught">Subject Taught</label>
+  <input type="text" id="subject_taught" name="user[subject_taught]">
+
+  <label for="grade_taught">Grade Taught</label>
+  <input type="text" id="grade_taught" name="user[grade_taught]">
+
+  <%= render partial: "shared/csrf" %>
+
+  <br>
+  <input type="submit" value="Sign Up">

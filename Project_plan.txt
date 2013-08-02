@@ -1,0 +1,200 @@
+Project Scope
+
+Routes:
+	#/index
+	#/users/new
+	#/users/id
+	#/session/new
+	#/tests
+	#/test/id
+	#/test/new
+	#/test/edit
+
+Associations:
+	Users
+	has_many :tests
+	has_many :comments
+
+	Tests
+	belongs_to :users
+	has_many :quesitons
+	has_many :answers
+	has_many :tags
+	has_many :comments
+	has_many :upvotes
+
+	Questions
+	belongs_to :test
+	has_many :answers
+
+	Answers
+	belongs_to :question
+
+	Upvotes
+	belongs_to :test
+
+	Comments
+	belongs_to :user
+	belongs_to :test
+
+	Tags
+	belongs_to :test
+
+
+Built In Method Calls:
+	Users.all
+	Tests.all
+	Questions.all
+	Answers.all
+	Tags.all
+	Upvotes.all
+	Comments.all
+
+
+	User.username
+	User.fname
+	User.lname
+	User.email
+	User.school
+	User.subject_taught
+	User.grade_taught
+	User.tests
+	User.upvotes
+	User.session_token
+
+	Test.test_name
+	Test.subject
+	Test.questions
+	Test.question.answers
+	Test.creator
+	Test.tags
+	Test.grade_levels
+	Test.comments
+	Test.upvotes
+
+	Question.question
+	Question.answers
+	Question.creator
+
+	Answer.answer
+	Answer.correct?
+
+	Tag.tag_name
+
+	Comment.user
+
+Forms:
+	Sign Up
+	Log In
+	Create Profile
+	Leave Comment
+	Build Test - Testname/Subject
+	Build Test - Questions
+	Build Test - Add Tag
+	Build Test - Add Grade Levels
+	Search Bar
+
+Views:
+	Sign Up Page
+	Sign In Page
+	Create Profile
+	After Create Direction
+	User Dashboard
+	Search Tests
+	Test View
+	Build Test
+	Edit Test
+
+
+
+
+Week 1
+
+Monday
+	Users, Sessions, Profiles
+	Routes:
+		#/index
+		#/users/new
+		#/users/id
+		#/session/new
+	Forms:
+		Sign Up
+		Log In
+		Create Profile
+	Templated-Views:
+		Sign Up Page
+		Sign In Page
+		Create Profile
+		Create Profile - Direction
+		User Dashboard
+
+Tuesday
+	Build Test
+	Routes:
+		#/test/new
+		#/test/edit
+	Forms:
+		Build Test - Testname/Subject
+		Build Test - Questions
+		Build Test - Add Tag
+		Build Test - Add Grade Levels
+	Templated-Views:
+		Build Test
+		Edit Test
+
+Wednesday
+	Test View, Search Tests, Comments, Download Test
+	Routes:
+		#/test/id
+		#/tests
+	Forms:
+		Search Bar
+		Leave Comment
+	Templated-Views:
+		Search Tests
+		Test View
+
+Thursday
+	Add Javascript & CSS
+	Finished-Views:
+		Sign Up Page
+		Sign In Page
+		Create Profile
+		Create Profile - Direction
+		User Dashboard
+
+Friday
+	Add Javascript & CSS
+	Finished-Views:
+		Build Test
+		Edit Test
+
+Saturday-Sunday
+	Add Javascript & CSS
+	Finished-Views:
+		Search Tests
+		Test View
+
+Week 2
+
+Monday
+  Upvotes
+
+Tuesday
+  Build in Social
+
+Wednesday
+  Scoring & Ranking of Upvotes
+
+Thursday, Friday
+  Refactor, Refine
+
+
+
+
+
+
+
+
+
+
