@@ -14,9 +14,6 @@ module ApplicationHelper
       @user.save!
 
       session[:session_token] = @user.session_token
-      redirect_to @user
-    else
-      redirect_to new_user_url
     end
   end
 

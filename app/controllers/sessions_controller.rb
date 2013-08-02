@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     p params
     p params[:user][:username]
     log_in(params[:user][:username], params[:user][:password])
+    redirect_to @user
   end
 
   def destroy
