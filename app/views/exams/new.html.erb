@@ -35,11 +35,12 @@
   <br>
   <!-- Nested Tag Attributes-->
 
-  <label for="exam_tag_0_title">Tag</label>
-  <input type="text" id="exam_tag_0_title" name="exam[tags_attributes][0][tag_title]">
+  <% @tags.each do |tag| %>
+  <% html_id = "exam_tag_ids_#{tag.id}" %>
+  <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>">
+  <label for="<%= html_id %>"><%= tag.tag_title %></label>
+  <% end %>
 
-  <label for="exam_tag_1_title">Tag</label>
-  <input type="text" id="exam_tag_1_title" name="exam[tags_attributes][1][tag_title]">
 
   <%= render partial: "shared/csrf" %>
   <br>

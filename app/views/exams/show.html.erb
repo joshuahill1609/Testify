@@ -20,6 +20,10 @@
 <br>
 
 <% end %>
+
+<% @exam.tags.each do |tag| %>
+<h4>Tags: <%= tag.tag_title %></h4>
+<% end %>
 <br>
 Params:
 <%= params %>

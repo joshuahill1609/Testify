@@ -7,6 +7,7 @@ class ExamsController < ApplicationController
   def new
     @exam = Exam.new
     @current_user = current_user
+    @tags = Tag.all
   end
 
   def create

@@ -3,5 +3,5 @@ class Tag < ActiveRecord::Base
 
   validates :tag_title, presence: true
 
-  belongs_to :exam
+  has_many :examtags
 end
