@@ -8,6 +8,7 @@ class ExamsController < ApplicationController
     @exam = Exam.new
     @current_user = current_user
     @tags = Tag.all
+    @grades = GradeLevel.all
   end
 
   def create

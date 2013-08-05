@@ -21,9 +21,13 @@
 
 <% end %>
 
+<h4>Tags</h4>
 <% @exam.tags.each do |tag| %>
-<h4>Tags: <%= tag.tag_title %></h4>
+<%= tag.tag_title %>
 <% end %>
 <br>
-Params:
-<%= params %>
+
+<h4>Grade Levels</h4>
+<% @exam.grade_levels.each do |grade| %>
+<%= grade.grade_level %>
+<% end %>

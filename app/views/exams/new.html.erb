@@ -33,14 +33,27 @@
 
   <br>
   <br>
-  <!-- Nested Tag Attributes-->
 
+  <!-- Tags -->
+
+  Tags
+  <br>
   <% @tags.each do |tag| %>
   <% html_id = "exam_tag_ids_#{tag.id}" %>
   <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>">
   <label for="<%= html_id %>"><%= tag.tag_title %></label>
   <% end %>
+  <br>
 
+  <!-- Grade Levels -->
+
+  Grade Levels
+  <br>
+  <% @grades.each do |grade| %>
+  <% html_id = "exam_grade_level_ids_#{grade.id}"%>
+  <input type="checkbox" name="exam[grade_level_ids][]" value="<%= grade.id %>" id="<%= html_id %>">
+  <label for="<%= html_id %>"><%= grade.grade_level %></label>
+  <% end %>
 
   <%= render partial: "shared/csrf" %>
   <br>
