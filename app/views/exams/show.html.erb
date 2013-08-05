@@ -1,18 +1,23 @@
 <h3>Show Test(Exam)</h3>
 
-<h4>Title:</h4>
-<%= @exam.exam_name %>
+<h4>Title: <%= @exam.exam_name %></h4>
+<h5>Subject: <%= @exam.exam_subject %></h5>
+
 <br>
 <h4>Questions</h4>
 <br>
+<% x = 1 %>
 <% @exam.questions.each do |q| %>
 
-<%= q.title %>
+<%= x %>)<%= q.title %>
+<% x += 1%>
 
 <h5>Answers</h5>
 <% q.answers.each do |answer| %>
-  <%= answer.body %>
+<%= answer.body %>
+<br>
 <% end %>
+<br>
 
 <% end %>
 <br>

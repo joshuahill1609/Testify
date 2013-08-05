@@ -11,6 +11,7 @@ class ExamsController < ApplicationController
 
   def create
     @exam = Exam.new(params[:exam])
+    p params
     if @exam.save
       redirect_to @exam
     else

@@ -4,7 +4,7 @@ class Question < ActiveRecord::Base
   validates :title, presence: true
 
   belongs_to :exam
-  has_many :answers, dependent: :destroy
+  has_many :answers
 
   accepts_nested_attributes_for :answers
 end

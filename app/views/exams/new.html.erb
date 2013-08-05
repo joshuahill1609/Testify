@@ -10,7 +10,7 @@
   <label for="exam_subject">Subject</label>
   <input type="text" id="exam_subject" name="exam[exam_subject]">
 
-  <input type="hidden" name="exam[user_id]" value="<%= @current_user.id %>">
+  <input type="hidden" name="exam[user_id]" value="<%= current_user.id %>">
 
   <!-- Nested Question Attributes -->
 
@@ -20,11 +20,8 @@
   <input type="text" id="exam_question_0_title" name="exam[questions_attributes][0][title]">
 
      <!-- Double Nested Answer Attributes, through Questions -->
-
-    <br>
-    <label for="question_answer_0_body">A)</label>
-    <input type="text" id="question_answer_0_body"
-      name="question[answers_attributes][0][body]">
+     <label for="question_answer_0_body">a)</label>
+     <input type="text" id="question_answer_0_body" name="exam[questions_attributes][0][answers_attributes][0][body]">
 
   <br>
   <label for="exam_question_1_title">2)</label>
@@ -34,6 +31,17 @@
   <label for="exam_question_2_title">3)</label>
   <input type="text" id="exam_question_2_title" name="exam[questions_attributes][3][title]">
 
+  <br>
+  <br>
+  <!-- Nested Tag Attributes-->
+
+  <label for="exam_tag_0_title">Tag</label>
+  <input type="text" id="exam_tag_0_title" name="exam[tags_attributes][0][tag_title]">
+
+  <label for="exam_tag_1_title">Tag</label>
+  <input type="text" id="exam_tag_1_title" name="exam[tags_attributes][1][tag_title]">
+
+  <%= render partial: "shared/csrf" %>
   <br>
   <input type="submit" value="Build Test">
 
