@@ -88,8 +88,8 @@ Forms:
 	Log In
 	Create Profile
 	Leave Comment
-	Build Test - Testname/Subject
-	Build Test - Questions
+	+Build Test - Testname/Subject
+	+Build Test - Questions
 	Build Test - Add Tag
 	Build Test - Add Grade Levels
 	Search Bar
@@ -118,15 +118,14 @@ Monday
 		#/users/id
 		#/session/new
 	Forms:
-		Sign Up
-		Log In
-		Create Profile
+		+Sign Up
+		+Log In
+		+Create Profile
 	Templated-Views:
-		Sign Up Page
-		Sign In Page
-		Create Profile
-		Create Profile - Direction
-		User Dashboard
+		+Sign Up Page
+		+Sign In Page
+		+Create Profile
+		+User Dashboard
 
 Tuesday
 	Build Test
@@ -134,13 +133,15 @@ Tuesday
 		#/test/new
 		#/test/edit
 	Forms:
-		Build Test - Testname/Subject
-		Build Test - Questions
-		Build Test - Add Tag
-		Build Test - Add Grade Levels
+		+Build Test - Testname/Subject
+		+Build Test - Questions
+		+Build Test - Add Tag
+		+Build Test - Add Grade Levels
 	Templated-Views:
 		Build Test
 		Edit Test
+  Tasks:
+    Should be able to add more/delete questions/answers
 
 Wednesday
 	Test View, Search Tests, Comments, Download Test
@@ -190,6 +191,9 @@ Thursday, Friday
   Refactor, Refine
 
 
+Still to add:
+Create Profile - Direction
+Add the ability to add more tags.
 
 
 
