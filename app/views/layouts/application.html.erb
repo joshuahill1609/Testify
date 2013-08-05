@@ -9,6 +9,8 @@
 <body>
   <% unless current_user.nil? %>
     Current User = <%= current_user.username %>
+  <% else %>
+    No User
   <% end %>
 
 <%= render partial: "shared/log_in_out" %>

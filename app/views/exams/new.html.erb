@@ -1,0 +1,40 @@
+<h2>Build Test(Exam)</h2>
+
+<form action="<%= exams_url %>" method="post">
+
+  <!-- Test Attributes -->
+
+  <label for="exam_name">Test Name</label>
+  <input type="text" id="exam_name" name="exam[exam_name]">
+
+  <label for="exam_subject">Subject</label>
+  <input type="text" id="exam_subject" name="exam[exam_subject]">
+
+  <input type="hidden" name="exam[user_id]" value="<%= @current_user.id %>">
+
+  <!-- Nested Question Attributes -->
+
+  <h1>Questions</h1>
+
+  <label for="exam_question_0_title">1)</label>
+  <input type="text" id="exam_question_0_title" name="exam[questions_attributes][0][title]">
+
+     <!-- Double Nested Answer Attributes, through Questions -->
+
+    <br>
+    <label for="question_answer_0_body">A)</label>
+    <input type="text" id="question_answer_0_body"
+      name="question[answers_attributes][0][body]">
+
+  <br>
+  <label for="exam_question_1_title">2)</label>
+  <input type="text" id="exam_question_1_title" name="exam[questions_attributes][2][title]">
+
+  <br>
+  <label for="exam_question_2_title">3)</label>
+  <input type="text" id="exam_question_2_title" name="exam[questions_attributes][3][title]">
+
+  <br>
+  <input type="submit" value="Build Test">
+
+</form>

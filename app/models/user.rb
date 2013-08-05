@@ -5,5 +5,7 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
+  has_many :tests
+
   has_secure_password
 end

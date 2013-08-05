@@ -1,0 +1,20 @@
+<h3>Show Test(Exam)</h3>
+
+<h4>Title:</h4>
+<%= @exam.exam_name %>
+<br>
+<h4>Questions</h4>
+<br>
+<% @exam.questions.each do |q| %>
+
+<%= q.title %>
+
+<h5>Answers</h5>
+<% q.answers.each do |answer| %>
+  <%= answer.body %>
+<% end %>
+
+<% end %>
+<br>
+Params:
+<%= params %>

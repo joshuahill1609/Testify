@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  exam_name: MyString
+  exam_subject: MyString
+  user_id: 1
+
+two:
+  exam_name: MyString
+  exam_subject: MyString
+  user_id: 1
