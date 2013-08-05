@@ -4,13 +4,8 @@
 
   <!-- Test Attributes -->
 
-  <label for="exam_name">Test Name</label>
-  <input type="text" id="exam_name" name="exam[exam_name]">
+  <%= render :partial => 'test_attributes' %>
 
-  <label for="exam_subject">Subject</label>
-  <input type="text" id="exam_subject" name="exam[exam_subject]">
-
-  <input type="hidden" name="exam[user_id]" value="<%= current_user.id %>">
 
   <!-- Nested Question Attributes -->
 
@@ -24,13 +19,6 @@
      <input type="text" id="question_answer_0_body" name="exam[questions_attributes][0][answers_attributes][0][body]">
 
   <br>
-  <label for="exam_question_1_title">2)</label>
-  <input type="text" id="exam_question_1_title" name="exam[questions_attributes][2][title]">
-
-  <br>
-  <label for="exam_question_2_title">3)</label>
-  <input type="text" id="exam_question_2_title" name="exam[questions_attributes][3][title]">
-
   <br>
   <br>
 
@@ -38,22 +26,16 @@
 
   Tags
   <br>
-  <% @tags.each do |tag| %>
-  <% html_id = "exam_tag_ids_#{tag.id}" %>
-  <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>">
-  <label for="<%= html_id %>"><%= tag.tag_title %></label>
-  <% end %>
+  <%= render :partial => 'tags' %>
+
   <br>
 
   <!-- Grade Levels -->
 
   Grade Levels
   <br>
-  <% @grades.each do |grade| %>
-  <% html_id = "exam_grade_level_ids_#{grade.id}"%>
-  <input type="checkbox" name="exam[grade_level_ids][]" value="<%= grade.id %>" id="<%= html_id %>">
-  <label for="<%= html_id %>"><%= grade.grade_level %></label>
-  <% end %>
+  <%= render :partial => 'grades' %>
+
 
   <%= render partial: "shared/csrf" %>
   <br>
