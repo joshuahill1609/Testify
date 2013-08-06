@@ -12,6 +12,8 @@
 <%= f.fields_for :questions %>
 <p><%= f.link_to_add "Add a question", :questions %></p>
 
+<%= render partial: "tags" %><br>
+<%= render partial: "grades" %>
 
 <p><%= f.submit "Submit" %></p>
 <% end %>
