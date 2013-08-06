@@ -11,3 +11,34 @@
  *= require_self
  *= require_tree .
  */
+
+html, body, h1, form, input{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+	background-color: #ECECEA;
+}
+
+.container {
+	width: 100%;
+}
+
+.content {
+	display: block;
+	width: 800px;
+	background-color: #DDD;
+	margin: auto;
+	margin-top: 10px;
+	border: 1px solid #AAA;
+	height: 300px;
+}
+
+/* Sign Up (new_users_url) */
+
+.sign_up {
+	color: white;
+	margin: auto;
+}

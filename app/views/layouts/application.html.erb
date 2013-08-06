@@ -5,16 +5,36 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag	"nav" %>
+  <%= stylesheet_link_tag	"sign_up" %>
+  <style>
+ 
+  </style>
+  
 </head>
 <body>
-  <% unless current_user.nil? %>
-    Current User = <%= current_user.username %>
-  <% else %>
-    No User
-  <% end %>
+	<header>
+		<nav class="group">
+			<div class="logo">
+				<%= image_tag "testify_logo.png"%>
+			</div>
+			<ul class="navigation">
+				<li><a href="#">LOG IN</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="content">
+
+			<%= yield %>
+		</div>
+	</div>
+
 
 <%= render partial: "shared/log_in_out" %>
-<%= yield %>
+<% unless current_user.nil? %>
+  Current User = <%= current_user.username %>
+<% end %>
 
 </body>
 </html>

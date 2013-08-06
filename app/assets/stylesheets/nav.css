@@ -1,0 +1,66 @@
+<!-- resets -->
+
+header, nav, div, ul, li, a, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.group:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+<!-- navbar -->
+
+header {
+	width: 100%;
+}
+
+nav {
+	border-bottom: 1px solid #558C89;
+	
+}
+
+nav .logo {
+	float: left;
+	padding: 10px 30px 10px 30px;
+}
+
+nav .logo img {
+	width: 175px;
+	height: auto;
+}
+
+nav ul {
+	display: block;
+	float: right;
+	margin: 0px;
+}
+
+nav ul li {
+	display: block;
+	float: left;
+}
+
+nav ul li a {
+	display: block;
+	padding: 30px;
+	color: #D9853B;
+	font-family: arial;
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	color: #555;
+}
