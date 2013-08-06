@@ -6,15 +6,18 @@ class ExamsController < ApplicationController
 
   def new
     @exam = Exam.new
-    @current_user = current_user
-    @tags = Tag.all
-    @grades = GradeLevel.all
+    @current_user_id = current_user.id
+    3.times do
+      question = @exam.questions.build
+      4.times { question.answers.build }
+    end
+
   end
 
   def create
     @exam = Exam.new(params[:exam])
-    p params
     if @exam.save
+      flash[:notice] = "Successfully created survey"
       redirect_to @exam
     else
       render :new
@@ -27,7 +30,7 @@ class ExamsController < ApplicationController
   end
 
   def edit
-
+    @exam = Exam.find(params[:id])
   end
 
   def update

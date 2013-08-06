@@ -29,7 +29,7 @@ body {
 .content {
 	display: block;
 	width: 800px;
-	background-color: #DDD;
+	background-color: #FFF;
 	margin: auto;
 	margin-top: 10px;
 	border: 1px solid #AAA;
@@ -39,6 +39,19 @@ body {
 /* Sign Up (new_users_url) */
 
 .sign_up {
+  display: block;
 	color: white;
 	margin: auto;
+  font-family: arial;
+  width: 130px;
+  margin-top: 20px;
+}
+
+.new_user_form {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-family: arial;
 }

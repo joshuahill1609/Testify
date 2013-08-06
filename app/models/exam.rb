@@ -12,5 +12,5 @@ class Exam < ActiveRecord::Base
   has_many :exam_grade_levels
   has_many :grade_levels, through: :exam_grade_levels
 
-  accepts_nested_attributes_for :questions
+  accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:title].blank? }, :allow_destroy => true
 end

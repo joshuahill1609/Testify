@@ -1,44 +1,20 @@
-<h2>Build Test(Exam)</h2>
+<%= nested_form_for @exam do |f| %>
+<p>
+  <%= f.label :exam_name %>
+  <%= f.text_field :exam_name %>
 
-<form action="<%= exams_url %>" method="post">
+  <%= f.label :exam_subject %>
+  <%= f.text_field :exam_subject %>
+</p>
+<%= f.hidden_field :user_id%>
+<%= hidden_field_tag 'exam[user_id]', current_user.id %>
 
-  <!-- Test Attributes -->
-
-  <%= render :partial => 'test_attributes' %>
-
-
-  <!-- Nested Question Attributes -->
-
-  <h1>Questions</h1>
-
-  <label for="exam_question_0_title">1)</label>
-  <input type="text" id="exam_question_0_title" name="exam[questions_attributes][0][title]">
-
-     <!-- Double Nested Answer Attributes, through Questions -->
-     <label for="question_answer_0_body">a)</label>
-     <input type="text" id="question_answer_0_body" name="exam[questions_attributes][0][answers_attributes][0][body]">
-
-  <br>
-  <br>
-  <br>
-
-  <!-- Tags -->
-
-  Tags
-  <br>
-  <%= render :partial => 'tags' %>
-
-  <br>
-
-  <!-- Grade Levels -->
-
-  Grade Levels
-  <br>
-  <%= render :partial => 'grades' %>
+<%= f.fields_for :questions %>
+<p><%= f.link_to_add "Add a question", :questions %></p>
 
 
-  <%= render partial: "shared/csrf" %>
-  <br>
-  <input type="submit" value="Build Test">
+<p><%= f.submit "Submit" %></p>
+<% end %>
 
-</form>
+
+

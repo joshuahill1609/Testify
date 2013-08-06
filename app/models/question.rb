@@ -4,7 +4,7 @@ class Question < ActiveRecord::Base
   validates :title, presence: true
 
   belongs_to :exam
-  has_many :answers
+  has_many :answers, dependent: :destroy
 
-  accepts_nested_attributes_for :answers
+  accepts_nested_attributes_for :answers, :reject_if => lambda { |a| a[:body].blank? }, :allow_destroy => true
 end

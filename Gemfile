@@ -40,3 +40,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 group :development do
   gem 'better_errors'
 end
+
+gem 'nested_form'

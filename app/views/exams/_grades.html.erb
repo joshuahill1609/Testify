@@ -1,4 +1,4 @@
-<% @grades.each do |grade| %>
+<% GradeLevel.all.each do |grade| %>
   <% html_id = "exam_grade_level_ids_#{grade.id}"%>
   <input type="checkbox" name="exam[grade_level_ids][]" value="<%= grade.id %>" id="<%= html_id %>">
   <label for="<%= html_id %>"><%= grade.grade_level %></label>

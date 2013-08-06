@@ -1,4 +1,4 @@
-<% @tags.each do |tag| %>
+<% Tag.all.each do |tag| %>
   <% html_id = "exam_tag_ids_#{tag.id}" %>
   <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>">
   <label for="<%= html_id %>"><%= tag.tag_title %></label>

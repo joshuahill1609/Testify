@@ -138,7 +138,7 @@ Tuesday
 		+Build Test - Add Tag
 		+Build Test - Add Grade Levels
 	Templated-Views:
-		Build Test
+		+Build Test
 		Edit Test
   Tasks:
     Should be able to add more/delete questions/answers
