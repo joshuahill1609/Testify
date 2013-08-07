@@ -69,8 +69,8 @@
   };
 
   window.nestedFormEvents = new NestedFormEvents();
-  $('form a.add_nested_fields').live('click', nestedFormEvents.addFields);
-  $('form a.remove_nested_fields').live('click', nestedFormEvents.removeFields);
+  $('form a.add_nested_fields').on('click', nestedFormEvents.addFields);
+  $('form a.remove_nested_fields').on('click', nestedFormEvents.removeFields);
 });
 // http://plugins.jquery.com/project/closestChild
 /*
