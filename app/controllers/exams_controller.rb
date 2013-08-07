@@ -1,7 +1,8 @@
 class ExamsController < ApplicationController
 
   def index
-    @exams = Exam.all
+    @exams = Exam.exam_name(params[:exam_name], params[:subject], params[:created_by])
+    p params
   end
 
   def new

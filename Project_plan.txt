@@ -152,8 +152,9 @@ Wednesday
 		Search Bar
 		Leave Comment
 	Templated-Views:
-		Search Tests
+		+Search Tests
 		+Test View
+    Download test in formatted version.
   Bonus:
     Could navigation as ujs
 
