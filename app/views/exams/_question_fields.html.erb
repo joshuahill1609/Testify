@@ -1,9 +1,11 @@
 
 <p>
-<%= f.label :Question %>
+<%= f.label :question %>
 <%= f.text_area :title, rows: 3 %>
 <%= f.link_to_remove "remove" %>
 </p>
+
+<%= f.fields_for :correct_answers %>
 
 <%= f.fields_for :answers %>
 <p><%= f.link_to_add "Add an answer", :answers %></p>

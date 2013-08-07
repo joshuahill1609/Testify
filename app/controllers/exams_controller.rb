@@ -9,7 +9,8 @@ class ExamsController < ApplicationController
     @current_user_id = current_user.id
     3.times do
       question = @exam.questions.build
-      4.times { question.answers.build }
+      question.correct_answers.build
+      3.times { question.answers.build }
     end
 
   end
