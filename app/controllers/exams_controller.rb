@@ -1,7 +1,7 @@
 class ExamsController < ApplicationController
 
   def index
-    @exams = Exam.search(params[:search])
+    @exams = Exam.all
   end
 
   def new
@@ -45,7 +45,10 @@ class ExamsController < ApplicationController
   end
 
   def destroy
+    exam = Exam.find(params[:id])
+    exam.destroy
 
+    redirect_to user_url(current_user)
   end
 
 end
