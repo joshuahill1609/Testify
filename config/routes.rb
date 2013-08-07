@@ -4,5 +4,5 @@ Testify::Application.routes.draw do
   resources :exams
 
 
-  root to: "sessions#new"
+  root to: "users#new"
 end

@@ -40,7 +40,7 @@ body {
 
 .sign_up {
   display: block;
-	color: white;
+	color: black;
 	margin: auto;
   font-family: arial;
   width: 130px;
@@ -52,6 +52,6 @@ body {
   margin: auto;
   text-align: center;
   padding: 20px;
-  color: white;
+  color: black;
   font-family: arial;
 }
