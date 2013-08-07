@@ -1,6 +1,6 @@
 
 
-<h3>Show Test(Exam)</h3>
+<h3>Show Test(Exam) <%= button_to "Edit", edit_exam_url(@exam), method: "get"%></h3>
 
 <h4>Title: <%= @exam.exam_name %></h4>
 <h5>Subject: <%= @exam.exam_subject %></h5>

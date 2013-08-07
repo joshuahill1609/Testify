@@ -1,7 +1,7 @@
 class ExamsController < ApplicationController
 
   def index
-    @exams = Exam.all
+    @exams = Exam.search(params[:search])
   end
 
   def new
@@ -35,7 +35,13 @@ class ExamsController < ApplicationController
   end
 
   def update
+    @exam = Exam.find(params[:id])
+    if @exam.update_attributes(params[:exam])
 
+      redirect_to @exam
+    else
+      render :edit
+    end
   end
 
   def destroy

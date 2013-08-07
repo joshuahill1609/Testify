@@ -139,7 +139,7 @@ Tuesday
 		+Build Test - Add Grade Levels
 	Templated-Views:
 		+Build Test
-		Edit Test
+		+Edit Test
   Tasks:
    +Should be able to add more/delete questions/answers
 
@@ -153,7 +153,9 @@ Wednesday
 		Leave Comment
 	Templated-Views:
 		Search Tests
-		Test View
+		+Test View
+  Bonus:
+    Could navigation as ujs
 
 Thursday
 	Add Javascript & CSS
