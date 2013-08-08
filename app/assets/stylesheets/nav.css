@@ -28,18 +28,18 @@ header {
 }
 
 nav {
-	border-bottom: 1px solid #558C89;
-	
+	height: 40px;
+	background-color: #252525;	
 }
 
 nav .logo {
 	float: left;
-	padding: 10px 30px 10px 30px;
 }
 
 nav .logo img {
-	width: 175px;
+	width: 40px;
 	height: auto;
+	padding: 3px 0 0 10px;
 }
 
 nav ul {
@@ -51,16 +51,16 @@ nav ul {
 nav ul li {
 	display: block;
 	float: left;
+	padding: 10px;
+	padding-top: 12px;
 }
 
 nav ul li a {
 	display: block;
-	padding: 30px;
-	color: #D9853B;
+	color: #FFF;
 	font-family: arial;
-	font-weight: bold;
 }
 
 nav ul li a:hover {
-	color: #555;
+	color: #E44424;
 }

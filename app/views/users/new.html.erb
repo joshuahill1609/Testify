@@ -1,18 +1,17 @@
-<h1 class="sign_up">Sign Up</h1>
+<section class="sign-up-form">
+	<h1 class="sign_up">Sign Up</h1>
 
-<form action="<%= users_url %>" method="post" class="new_user_form">
+	<form action="<%= users_url %>" method="post">
 
-  <label for="username">Username</label><br>
-  <input type="text" id="username" name="user[username]"><br>
+	<input type="text" id="username" name="user[username]" placeholder="Username"><br>
 
-  <label for="password">Password</label><br>
-  <input type="password" id="password" name="user[password]"><br>
+	<input type="password" id="password" name="user[password]" placeholder="Password"><br>
 
-  <label for="password_confirmation">Confirm Password</label><br>
-  <input type="password" id="password_confirmation"
-         name="user[password_confirmation]"><br><br>
+	<input type="password" id="password_confirmation"
+	     name="user[password_confirmation]" placeholder="Confirm Passoword"><br><br>
 
-  <%= render partial: "shared/csrf" %>
+	<%= render partial: "shared/csrf" %>
 
-  <input type="submit" value="Sign Up">
+	<input type="submit" value="Sign Up" class="sign-up-button">
 
+</section>
