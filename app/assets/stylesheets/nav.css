@@ -1,4 +1,4 @@
-<!-- resets -->
+/* resets */
 
 header, nav, div, ul, li, a, img, input {
 	margin: 0;
@@ -22,7 +22,7 @@ a {
 }
 
 
-<!-- navbar -->
+/* navbar*/
 
 header {
 	width: 100%;
