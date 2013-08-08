@@ -39,7 +39,8 @@ body {
 	width: 100%;
 	margin: auto;
   display:block;
-	border: 1px solid #AAA;
+  border: 1px solid #AAA;
+  box-sizing: border-box;
 }
 
 /* Sign Up (new_users_url) */
