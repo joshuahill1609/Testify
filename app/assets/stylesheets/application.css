@@ -12,11 +12,16 @@
  *= require_tree .
  */
 
-html, body, h1, form, input{
+html, body, h1, form, input, section, span, ul, li {
   margin: 0;
   padding: 0;
   outline: 0;
 }
+
+html {
+  height: 100%;
+}
+
 
 body {
 	background-color: #AAA;
@@ -24,49 +29,171 @@ body {
 
 .container {
 	width: 100%;
+  background-image: url('colum.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .content {
 	width: 100%;
-	background-color: #FFF;
 	margin: auto;
+  display:block;
 	border: 1px solid #AAA;
-	height: 300px;
 }
 
 /* Sign Up (new_users_url) */
 
 .sign-up-form {
 	display: block;
-	width: 300px;
+	width: 250px;
 	float: right;
 	margin: 80px 50px 0 0;
-    background-color: #67BCDB;
+  background: rgba(103, 188, 219, 0.90);
 	border-radius: 10px;
+
 }
 
-.sign_up {
-	text-align: center;
-  	font-family: arial;
-}
 
 .sign-up-form > form {
   text-align: center;
   padding: 20px;
+  margin: 0 10px 0 0;
   color: black;
   font-family: arial;
+  border-top: 0;
 }
 
 .sign-up-form > form > input {
-	border-radius: 10px;
-	padding: 5px;
-	margin-top: 3px;
-	width: 90%;
+	border-radius: 3px;
+	padding: 4px;
+	width: 99%;
+  margin-top: 4px;
+  padding-left: 8px;
+  outline: none;
+  height: 36px;
+  font-size: 15px;
+}
+
+.focusField {
+  border:solid 2px #73A6FF;
+         background:#EFF5FF;
+         color:#000;
+}
+
+.idleField{
+  background:#EEE;
+      color: #6F6F6F;
+      border: solid 2px #DFDFDF;
 }
 
 .sign-up-form > form > .sign-up-button {
 	width: 100px;
-	background-color: #E44424;
-	border-radius: 0;
+	border-radius: 5px;
+  color :#FFF;
+  font-size: 15px;
+  /*background-color: #E44424;*/
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border: 0;
 }
 
+.sign-up-form > form > .sign-up-button:hover {
+  background: #E44424;
+}
+
+/* Side logo and tag-line display */
+
+.logo-display {
+  width: 400px;
+  float: left;
+  margin-top: 80px;
+  padding: 0;
+  /*background: rgba(0, 0, 0, 0.40);
+  border-radius: 20px;
+  padding: 20px 30px 10px 20px;*/
+}
+
+.logo-display > img {
+  width: 250px;
+  height: auto;
+ /* background: rgba(0, 0, 0, .60);
+  padding:3px;
+  padding-right: 20px;
+  border-radius: 4px;*/
+}
+
+.logo-display > .tag-line {
+  display: block;
+  width: 100%;
+  font-family: arial;
+  font-size: 20px;
+  text-align: right;
+/*  font-weight: bold;
+*/  color: white;
+  background-color: #E44424;
+  padding:3px;
+  padding-right: 5px;
+}
+
+/* Seporation bar */
+
+.divide-bar {
+  width: 100%;
+  height: 20px;
+  margin-top: 58%;
+  margin-bottom: 0px;
+}
+
+.divide-bar > .bar {
+  background: rgba(0, 0, 0, 0.70);
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Bottom features display bar */
+
+.marketing-speak {
+  display: block;
+  height: 300px;
+  width: 100%;
+  background-color: white;
+}
+
+.features {
+  width: 95%;
+  margin: auto;
+}
+
+.features > ul {
+
+}
+
+.features > ul > li {
+  width: 33.11%;
+  float: left;
+  margin-top: 10px;
+}
+
+.features > ul > li:first-child {
+  border-right: 1px solid #AAA;
+}
+
+.features > ul > li:last-child {
+  border-left: 1px solid #AAA;
+}
+
+.features > ul > li > span {
+  width: 80px;
+  display:block;
+  margin: auto;
+  font-family: arial;
+  font-size: 30px;
+  color: #E44424;
+}
+
+.features > ul > li > p {
+  padding: 0px 15px;
+  color: #555;
+}

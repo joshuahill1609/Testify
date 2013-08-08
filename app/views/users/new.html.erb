@@ -1,17 +1,61 @@
-<section class="sign-up-form">
-	<h1 class="sign_up">Sign Up</h1>
+<div class="container">
+	<div class="content group">
 
-	<form action="<%= users_url %>" method="post">
+    <section class="logo-display">
+      <%= image_tag "testify_logo.png"%><br>
 
-	<input type="text" id="username" name="user[username]" placeholder="Username"><br>
+      <span class="tag-line">
+        The simplest way to manage tests.
+      </span>
+    </section>
 
-	<input type="password" id="password" name="user[password]" placeholder="Password"><br>
+    <section class="sign-up-form">
 
-	<input type="password" id="password_confirmation"
-	     name="user[password_confirmation]" placeholder="Confirm Passoword"><br><br>
+    	<form action="<%= users_url %>" method="post">
 
-	<%= render partial: "shared/csrf" %>
+    	<input type="text" id="username" name="user[username]" placeholder="Username" ><br>
 
-	<input type="submit" value="Sign Up" class="sign-up-button">
+    	<input type="password" id="password" name="user[password]" placeholder="Password"><br>
 
-</section>
+    	<input type="password" id="password_confirmation"
+    	     name="user[password_confirmation]" placeholder="Confirm Password"><br><br>
+
+    	<%= render partial: "shared/csrf" %>
+
+    	<input type="submit" value="Sign Up" class="sign-up-button">
+
+    </section>
+
+    <section class="divide-bar">
+      <div class="bar">
+      </div>
+    </section>
+
+    <section class="marketing-speak group">
+      <div class="features">
+        <ul>
+          <li>
+            <span>Build</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+          <li>
+            <span>Store</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+          <li>
+            <span>Share</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+	</div>
+</div>

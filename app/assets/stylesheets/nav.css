@@ -1,10 +1,11 @@
 <!-- resets -->
 
-header, nav, div, ul, li, a, img {
+header, nav, div, ul, li, a, img, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
+
 
 ul {
 	list-style: none;
@@ -29,7 +30,7 @@ header {
 
 nav {
 	height: 40px;
-	background-color: #252525;	
+	background-color: #252525;
 }
 
 nav .logo {
@@ -55,12 +56,19 @@ nav ul li {
 	padding-top: 12px;
 }
 
-nav ul li a {
+nav ul li input {
+  background:none;
+  border:0;
+  color:#ff0000;
+}
+
+nav ul li input {
 	display: block;
 	color: #FFF;
 	font-family: arial;
+  font-size: 15px;
 }
 
-nav ul li a:hover {
+nav ul li input:hover {
 	color: #E44424;
 }

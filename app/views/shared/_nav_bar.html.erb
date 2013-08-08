@@ -1,0 +1,18 @@
+<header>
+		<nav class="group">
+			<div class="logo">
+        <a href="<%= root_url %>">
+				  <%= image_tag "testify_logo_small.png"%>
+        </a>
+			</div>
+			<ul class="navigation">
+				<li>
+          <% if current_user %>
+            <%= button_to "Log Out", session_url(current_user), method: "delete"%>
+          <% else %>
+            <%= button_to "Log In", new_session_url, method: "get"%>
+          <% end %>
+        </li>
+			</ul>
+		</nav>
+	</header>

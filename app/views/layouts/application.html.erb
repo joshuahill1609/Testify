@@ -8,33 +8,14 @@
   <%= stylesheet_link_tag	"nav" %>
   <%= stylesheet_link_tag	"sign_up" %>
   <style>
- 
+
   </style>
-  
+
 </head>
 <body>
-	<header>
-		<nav class="group">
-			<div class="logo">
-				<%= image_tag "testify_logo_small.png"%>
-			</div>
-			<ul class="navigation">
-				<li><a href="#">LOG IN</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="container">
-		<div class="content">
+	<%= render :partial => 'shared/nav_bar' %>
 
-			<%= yield %>
-		</div>
-	</div>
-
-
-<%= render partial: "shared/log_in_out" %>
-<% unless current_user.nil? %>
-  Current User = <%= current_user.username %>
-<% end %>
+  <%= yield %>
 
 </body>
 </html>
