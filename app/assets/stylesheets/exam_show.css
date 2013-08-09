@@ -1,0 +1,145 @@
+/* test show sub nav */
+
+.test-nav-bar {
+  display: block;
+  width: 100%;
+  background: rgba(103, 188, 219, 0.90);
+}
+
+.test-nav-bar > p {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  font-family: arial;
+  color: white;
+ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border-radius: 5px;
+}
+
+.test-nav-bar > p > a {
+  color: white;
+  font-size: 15px;
+}
+
+.test-nav-bar > p > a:hover {
+  background: #E44424;
+}
+
+.test-nav-bar > ul {
+  float: right;
+  margin-right: 50px;
+}
+
+.test-nav-bar > ul > li {
+  float: left;
+}
+
+.test-nav-bar > ul > li > a {
+  display: block;
+  font-family: arial;
+  color: white;
+  padding: 7px;
+  margin: 3px 0;
+  border-left: 1px solid #E44424;
+}
+
+.test-nav-bar > ul > li:first-child > a {
+  border-left: none;
+}
+
+.test-nav-bar > ul > li > a:hover {
+  color: #E44424;
+}
+
+
+/* Test Container & Parent Styles*/
+
+.test-show-content {
+  width: 70%;
+  float: left;
+  margin-left: 55px;
+  margin-top: 20px;
+  background: white;
+  border: 1px solid blue;
+}
+
+.test-show-content > p {
+  font-family: arial;
+}
+
+
+/* Test Content */
+
+.exam_name {
+  margin: 15px 0 0 15px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.exam_subject {
+  margin: 5px 0 0 15px;
+}
+
+.exam_questions {
+  margin: 20px 0 20px 15px;
+  font-family: arial;
+}
+
+.question {
+  margin-top: 20px;
+}
+
+.question_answers {
+  margin: 10px 0 0 25px;
+  font-family: arial;
+}
+
+.answer {
+  margin-top: 5px;
+}
+
+/* Tags Box */
+
+.exam_tags {
+  margin: 20px 20px 0 0 ;
+  float: right;
+  border-radius: 10px;
+  padding: 10px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(gray));
+
+}
+
+.exam_tags > ul {
+  width: 100%;
+}
+
+.exam_tags > ul > li {
+  font-family: arial;
+  font-size: 25px;
+  color: white;
+  padding: 5px 0 0 10px;
+}
+
+.exam_tags > ul > li:first-child {
+display: none;}
+
+/* Grade Level Box */
+
+.exam_grade_level {
+  margin: 20px 20px 0 0 ;
+  float: right;
+  border-radius: 10px;
+  padding: 10px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(gray));
+}
+
+.exam_grade_level > ul {
+  width: 100%;
+}
+
+.exam_grade_level > ul > li {
+  font-family: arial;
+  font-size: 25px;
+  color: white;
+  padding: 5px 0 0 10px;
+}

@@ -1,5 +1,6 @@
 <% Tag.all.each do |tag| %>
   <% html_id = "exam_tag_ids_#{tag.id}" %>
-  <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>">
+  <input type="checkbox" name="exam[tag_ids][]" value="<%= tag.id %>" id="<%= html_id %>"  "<%= @exam.tags.include?(tag.id) ? '' : '' %>" >
   <label for="<%= html_id %>"><%= tag.tag_title %></label>
   <% end %>
+

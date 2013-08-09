@@ -149,7 +149,7 @@ Wednesday
 		#/test/id
 		#/tests
 	Forms:
-		+Search Bar
+		Search Bar
 		Leave Comment
 	Templated-Views:
 		+Search Tests

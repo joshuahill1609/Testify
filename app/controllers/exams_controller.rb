@@ -2,7 +2,6 @@ class ExamsController < ApplicationController
 
   def index
     @exams = Exam.exam_name(params[:exam_name], params[:subject], params[:created_by])
-    p params
   end
 
   def new
@@ -29,6 +28,17 @@ class ExamsController < ApplicationController
   def show
     @exam = Exam.find(params[:id])
     @questions = Question.where(exam_id = @exam.id)
+    @letters = ["A", "B", "C", "D", "E", "F"]
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = ExamPdf.new(@exam, current_user)
+        send_data pdf.render, filename: "test_#{@exam.exam_name}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
   end
 
   def edit

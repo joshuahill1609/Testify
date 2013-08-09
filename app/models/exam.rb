@@ -14,14 +14,11 @@ class Exam < ActiveRecord::Base
 
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:title].blank? }, :allow_destroy => true
 
-  #
-  # default_scope { find(:all) }
-  # scope :exam_name, ->(exam_name) {where("exam_name = ?", exam_name)}
 
+
+  # class method for search bar on /exams
   def self.exam_name(exam_name, subject, created_by)
     if exam_name
-      p exam_name
-      p subject
      Exam.joins("INNER JOIN users ON users.id = exams.user_id").find(:all, :conditions => ['exam_name LIKE ? AND exam_subject LIKE ? AND username LIKE ?', "%#{exam_name}%", "%#{subject}%", "%#{created_by}%"])
     else
      find(:all)

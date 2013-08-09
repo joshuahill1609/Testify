@@ -1,35 +1,53 @@
+<div class="test-nav-bar group">
+  <p><%= link_to "Print Test (PDF)", exam_url(@exam, format: "pdf")%></p>
+  <ul>
+    <li><%= link_to "Edit", edit_exam_url %></li>
+    <li><%= link_to "Delete", exam_url(@exam), method: "delete"%></li>
+  </ul>
+</div>
+<div class="test-show-content ">
 
+  <p class="exam_name"><%= @exam.exam_name %></p>
+  <p class="exam_subject"><strong>Subject:</strong> <%= @exam.exam_subject %></p>
 
-<h3>Show Test(Exam) <%= button_to "Edit", edit_exam_url(@exam), method: "get"%><%= button_to "Delete", exam_url(@exam), method: "delete"%></h3>
+  <section class="exam_questions">
+    <% x = 1 %>
+    <% @exam.questions.each do |q| %>
+    <section class="question">
+      <%= x %>)<%= q.title %>
+      <% x += 1%>
+    </section>
 
-<h4>Title: <%= @exam.exam_name %></h4>
-<h5>Subject: <%= @exam.exam_subject %></h5>
+    <section class="question_answers">
+      <%= @letters[0] %>)<%= q.correct_answers.first.body %>
+      <% j = 1 %>
+      <% q.answers.each do |answer| %>
+        <section class="answer">
+          <%= @letters[j] %>)<%= answer.body %>
+          <% j += 1 %>
+        </section>
+      <% end %>
+    </section>
 
-<br>
-<h4>Questions</h4>
-<br>
-<% x = 1 %>
-<% @exam.questions.each do |q| %>
+    <% end %>
+  </section>
 
-<%= x %>)<%= q.title %>
-<% x += 1%>
+</div>
 
-<h5>Answers</h5>
-<% q.answers.each do |answer| %>
-<%= answer.body %>
-<br>
-<% end %>
-<br>
+<section class="exam_tags">
+  <ul>
+    <li class="tag">Tags</li>
+    <% @exam.tags.each do |tag| %>
+      <li><%= tag.tag_title %></li>
+    <% end %>
+  </ul>
+</section>
 
-<% end %>
-
-<h4>Tags</h4>
-<% @exam.tags.each do |tag| %>
-<%= tag.tag_title %>
-<% end %>
-<br>
-
-<h4>Grade Levels</h4>
-<% @exam.grade_levels.each do |grade| %>
-<%= grade.grade_level %>
-<% end %>
+<section class="exam_grade_level">
+  <ul>
+    <li class="grade_level">Grade Level</li>
+    <% @exam.grade_levels.each do |grade| %>
+      <li><%= grade.grade_level %></li>
+    <% end %>
+  </ul>
+</section>
