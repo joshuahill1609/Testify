@@ -26,8 +26,8 @@
 }
 
 .test-nav-bar > ul {
-  float: right;
-  margin-right: 50px;
+  float: left;
+  margin-left: 5px;
 }
 
 .test-nav-bar > ul > li {
@@ -60,7 +60,7 @@
   margin-left: 55px;
   margin-top: 20px;
   background: white;
-  border: 1px solid blue;
+  box-shadow: 10px 10px 10px #888888;
 }
 
 .test-show-content > p {
@@ -98,48 +98,53 @@
   margin-top: 5px;
 }
 
+/* Test Info Container */
+
+.test-info {
+	border-left: 1px solid black;
+	display: inline-block;
+	margin: 20px 0 0 20px;
+	
+}
+
+.test-info > ul {
+	
+}
+
+.test-info > ul > li {
+	
+}
+
 /* Tags Box */
 
 .exam_tags {
-  margin: 20px 20px 0 0 ;
-  float: right;
-  border-radius: 10px;
-  padding: 10px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(gray));
 
 }
 
 .exam_tags > ul {
-  width: 100%;
 }
 
 .exam_tags > ul > li {
-  font-family: arial;
-  font-size: 25px;
-  color: white;
-  padding: 5px 0 0 10px;
+	padding: 10px;
+	font-family: arial;
 }
 
 .exam_tags > ul > li:first-child {
-display: none;}
+	display: none;
+}
 
 /* Grade Level Box */
 
 .exam_grade_level {
-  margin: 20px 20px 0 0 ;
-  float: right;
-  border-radius: 10px;
-  padding: 10px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(gray));
+	
 }
 
 .exam_grade_level > ul {
-  width: 100%;
+
 }
 
 .exam_grade_level > ul > li {
-  font-family: arial;
-  font-size: 25px;
-  color: white;
-  padding: 5px 0 0 10px;
+	font-family: arial;
+	text-align: center;
 }
+

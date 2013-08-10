@@ -1,10 +1,11 @@
 <div class="test-nav-bar group">
-  <p><%= link_to "Print Test (PDF)", exam_url(@exam, format: "pdf")%></p>
+  <p><%= link_to "Print (PDF)", exam_url(@exam, format: "pdf")%></p>
   <ul>
     <li><%= link_to "Edit", edit_exam_url %></li>
     <li><%= link_to "Delete", exam_url(@exam), method: "delete"%></li>
   </ul>
 </div>
+
 <div class="test-show-content ">
 
   <p class="exam_name"><%= @exam.exam_name %></p>
@@ -34,20 +35,26 @@
 
 </div>
 
-<section class="exam_tags">
-  <ul>
-    <li class="tag">Tags</li>
-    <% @exam.tags.each do |tag| %>
-      <li><%= tag.tag_title %></li>
-    <% end %>
-  </ul>
-</section>
-
-<section class="exam_grade_level">
-  <ul>
-    <li class="grade_level">Grade Level</li>
-    <% @exam.grade_levels.each do |grade| %>
-      <li><%= grade.grade_level %></li>
-    <% end %>
-  </ul>
-</section>
+<div class="test-info">
+	<ul>
+		<li>
+			<section class="exam_tags">
+			  <ul>
+			    <li class="tag">Tags</li>
+			    <% @exam.tags.each do |tag| %>
+			      <li><%= tag.tag_title %></li>
+			    <% end %>
+			  </ul>
+			</section>
+		</li>
+		<li>
+			<section class="exam_grade_level">
+			  <ul>
+			    <% @exam.grade_levels.each do |grade| %>
+			      <li><%= grade.grade_level %><br> grade</li>
+			    <% end %>
+			  </ul>
+			</section>
+		</li>
+	</ul>
+</div>

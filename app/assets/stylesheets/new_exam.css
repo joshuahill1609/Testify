@@ -1,0 +1,222 @@
+/* test show sub nav */
+
+.test-nav-bar {
+  display: block;
+  width: 100%;
+  background: rgba(103, 188, 219, 0.90);
+}
+
+.test-nav-bar > p {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  font-family: arial;
+  color: white;
+ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border-radius: 5px;
+}
+
+.test-nav-bar > p > a {
+  color: white;
+  font-size: 15px;
+}
+
+.test-nav-bar > p > a:hover {
+  background: #E44424;
+}
+
+.test-nav-bar > ul {
+  float: left;
+  margin-left: 5px;
+}
+
+.test-nav-bar > ul > li {
+  float: left;
+}
+
+.test-nav-bar > ul > li > a {
+  display: block;
+  font-family: arial;
+  color: white;
+  padding: 7px;
+  margin: 3px 0;
+  border-left: 1px solid #E44424;
+}
+
+.test-nav-bar > ul > li:first-child > a {
+  border-left: none;
+}
+
+.test-nav-bar > ul > li > a:hover {
+  color: #E44424;
+}
+
+
+/* Test Container & Parent Styles*/
+
+.build-test-container {
+  width: 70%;
+  float: left;
+  margin-left: 55px;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 10px 10px 10px #888888;
+}
+
+.build-test-container > .form {
+	width: 90%;
+	margin: auto;
+	padding-top: 20px;
+}
+
+/* Test Attributes */
+
+.exam-attr {
+	height: 50px;
+	width: 475px;
+	margin: auto;
+	
+}
+
+.exam-attr >ul {
+}
+
+.exam-attr > ul > li {
+	float: left;
+	padding: 5px;
+	margin-left: 25px;
+}
+
+.exam-attr > ul > li > input {
+	padding: 10px;
+	border-radius: 3px;
+	color: white;
+	font-family: arial;
+	font-size: 12px;
+    box-shadow: 3px 3px 10px #888888;
+	
+}
+
+/* Questions */
+
+
+.new-question {
+	width: 400px;
+	margin: auto;
+	border-radius: 4px;
+	background-color: #BBB;
+	margin-bottom: 15px;
+    box-shadow: 3px 3px 10px #888888;
+	
+}
+
+.new-question > p {
+	display: block;
+	font-family: arial;
+	text-align: center;
+	padding-top: 8px;
+	color: black;
+}
+
+.new-question > input[type=text], textarea {
+    border-width: 2px;
+	display: block;
+	width: 90%;
+	margin: auto;
+	margin-top: 5px;
+	background: black;
+	border-radius: 4px;
+	color: white;
+	padding: 10px;
+	font-size: 15px;
+    box-shadow: 5px 5px 10px #888888;
+	
+}
+
+.new-question > input[type=text], textarea:focus {
+	outline: none;
+}
+
+.new-question > a > img {
+	float: right;
+	width: 20px;
+	height: auto;
+	margin-right: -25px;
+	margin-top: -40px;
+}
+
+/* Answers */
+
+.new-question > .correct-answer {
+	margin-top: 10px;
+}
+
+.new-question > .correct-answer > .fields > input {
+	padding: 10px;
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 75%;
+	border-radius: 3px;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+    box-shadow: 3px 3px 10px #888888;
+}
+
+.new-question > .correct-answer > a {
+	float: right;
+	display: inline-block;
+	margin-top: -40px;
+	margin-right: 15px;
+	width: 22px;
+	height: 22px;
+	background-image: url('exam_add.png');
+}
+
+.new-question  > .answers {
+	margin-top: 10px;
+}
+
+.new-question > .answers > .fields > input {
+	padding: 10px;
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 75%;
+	border-radius: 3px;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+    box-shadow: 3px 3px 10px #888888;
+}
+
+.new-question > .answers > .fields > a  {
+	float: right;
+	width: 20px;
+	height: auto;
+	margin-right: 15px;
+	margin-top: -40px;
+}
+
+.new-question > .answers > a {
+	display: block;
+	width: 100px;
+	margin: auto;
+	background: black;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	text-align: center;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+
+
+/* temp */
+input {
+	background-color: black;
+	color: white;
+}
