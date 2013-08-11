@@ -1,19 +1,19 @@
+<li style="list-style: none;">
+<section class="new-question group" >
+		<p>
+			<%= f.label :question, "Multiple Choice Question" %>
+		</p>
+		<%= f.text_area :title, rows: 2 %>
+		<%= f.link_to_remove image_tag "question_remove.png" %>
 
-<section class="new-question group">
-	<p>
-		<%= f.label :question, "Multiple Choice Question" %>
-	</p>
-	<%= f.text_area :title, rows: 2 %>
-	<%= f.link_to_remove image_tag "question_remove.png" %>
-
-	<div class="correct-answer">
-		<%= f.fields_for :correct_answers %>
-		<%= f.link_to_add "", :correct_answers %>
-	</div>
+		<div class="correct-answer">
+			<%= f.fields_for :correct_answers %>
+			<%= f.link_to_add "", :correct_answers %>
+		</div>
 	
-	<div class="answers">
-		<%= f.fields_for :answers %>
-		<%= f.link_to_add "Add a answer", :answers %>
-	</div>
-	
+		<div class="answers">
+			<%= f.fields_for :answers %>
+			<%= f.link_to_add "Add a answer", :answers %>
+		</div>
 </section>
+</li>

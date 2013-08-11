@@ -1,5 +1,8 @@
-<% GradeLevel.all.each do |grade| %>
-  <% html_id = "exam_grade_level_ids_#{grade.id}"%>
-  <input type="checkbox" name="exam[grade_level_ids][]" value="<%= grade.id %>" id="<%= html_id %>">
-  <label for="<%= html_id %>"><%= grade.grade_level %></label>
-  <% end %>
+<section class="grade">
+	<p>Select Grade</p>
+	<select name="exam[grade_level_ids][]">
+	  <% GradeLevel.all.each do |grade| %>
+	  <option value="<%= grade.id %>"><%= grade.grade_level %></option>
+	  <% end %>
+	</select>
+</section>
