@@ -1,0 +1,52 @@
+.exams-container {
+	width: 70%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.exams-container > .search {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin: auto;
+	padding: 10px;
+	background:  rgba(103, 188, 219, 0.90);
+	border-radius: 4px;
+	font-family: arial;
+	color: white;
+}
+
+.exams-container > .search > form > input[type=text] {
+	padding: 5px;
+	font-family: arial;
+}
+
+.exams-container > .search > form > input[type=submit] {
+	width: 50px;
+	margin: 15px 0 0 5px;
+	padding: 8px;
+	border-radius: 5px;
+ 	color :#FFF;
+  	font-size: 10px;
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  	border: 0;
+}
+
+.exams-container > ul {
+	margin-top: 20px;
+}
+
+.exams-container > ul > li {
+	background-color:  rgba(103, 188, 219, 0.90);
+	border-radius: 4px;
+	padding: 8px;
+}
+
+.exams-container > ul > li > a {
+	color: white;
+}
+
+.exams-container > ul > li > a > .color {
+	color: #E44424;
+	font-family: arial;
+}

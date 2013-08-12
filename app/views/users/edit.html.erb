@@ -1,4 +1,7 @@
-<h1>Create Profile</h1>
+<div class="pro-form-container">
+
+
+<h1>Profile Information</h1>
 
 <form action="<%= user_url(current_user) %>" method="post">
   <input type="hidden" name="_method" value="put">
@@ -7,7 +10,7 @@
 
   <%= render partial: "shared/csrf" %>
 
-  <input type="submit" value="Finish">
+  <br><input type="submit" value="Finish">
 </form>
 
-
+</div>

@@ -1,0 +1,88 @@
+/* profile nav */
+
+.user-profile-sub-nav {
+  display: block;
+  width: 100%;
+  background: rgba(103, 188, 219, 0.90);
+}
+
+.user-profile-sub-nav > p {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  font-family: arial;
+  color: white;
+ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border-radius: 5px;
+}
+
+.user-profile-sub-nav > p > a {
+  color: white;
+  font-size: 15px;
+}
+
+.user-profile-sub-nav > p > a:hover {
+  background: #E44424;
+}
+
+.user-profile-sub-nav > ul {
+  float: left;
+  margin-left: 5px;
+}
+
+.user-profile-sub-nav > ul > li {
+  float: left;
+}
+
+.user-profile-sub-nav > ul > li > a {
+  display: block;
+  font-family: arial;
+  color: white;
+  padding: 7px;
+  margin: 3px 0;
+  border-left: 1px solid #E44424;
+}
+
+.user-profile-sub-nav > ul > li:first-child > a {
+  border-left: none;
+}
+
+.user-profile-sub-nav > ul > li > a:hover {
+  color: #E44424;
+}
+
+/* profile container */
+
+.profile-container {
+	width: 96%;
+	margin: auto;
+	background: white;
+}
+
+.profile-container > h1 {
+	padding: 10px;
+	font-family: arial;
+}
+
+.profile-container > p {
+	padding-left: 20px;
+	font-family: arial;
+	font-size: 20px;
+}
+
+.profile-container > ul {
+	padding-left: 25px;
+	margin-top: 10px;
+}
+.profile-container > ul > li {
+	background: rgba(103, 188, 219, 0.90);
+	width: 80%;
+	border-radius: 4px;
+	padding: 8px;
+}
+
+.profile-container > ul > li > a {
+	color: white;
+	font-family: arial;
+	font-size: 18px;
+}
