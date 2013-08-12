@@ -1,4 +1,10 @@
 $(document).ready(function(){
 
-	$(".fields").sortable();
+	$(".sortable").sortable();
+	
+	$("#exam_save").click(function(){
+		$("#new_exam").submit();
+		return false;
+	})
+	
 });

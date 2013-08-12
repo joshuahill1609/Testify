@@ -1,7 +1,6 @@
 <div class="test-nav-bar group">
     <ul>
-      <li><%= link_to "Save" %></li>
-      <li><%= link_to "Holders"%></li>
+      <li><a href="#" id="exam_save">Save</a></li>
     </ul>
 </div>
 
@@ -18,10 +17,10 @@
 		<%= f.hidden_field :user_id%>
 		<%= hidden_field_tag 'exam[user_id]', current_user.id %>
 
-		<%= f.fields_for :questions %>
-		<p><%= f.link_to_add "Add a question", :questions %></p>
+		<ul class="sortable"><%= f.fields_for :questions %></ul>
+		<p id="add-q"><%= f.link_to_add "Add a question", :questions %></p>
 
-		<p><%= f.submit "Submit" %></p>
+		<p id="save_exam"><%= f.submit "Submit" %></p>
 		<% end %>
 	</section>
 </div>

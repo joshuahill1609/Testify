@@ -67,6 +67,33 @@
 	width: 90%;
 	margin: auto;
 	padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* bottom of test nav buttons */
+
+#save_exam > input {
+	display: block;
+    padding: 5px;
+    margin: auto;
+    font-family: arial;
+    color: white;
+   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+    border-radius: 5px;
+	font-size: 15px;	
+}
+
+#add-q > .add_nested_fields {
+	display: block;
+	width: 100px;
+    padding: 5px;
+    margin: auto;
+	margin-bottom: 10px;
+    font-family: arial;
+    color: white;
+   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+    border-radius: 5px;
+	font-size: 15px;	
 }
 
 /* Test Attributes */
@@ -207,6 +234,8 @@
 	text-align: center;
 	border-radius: 4px;
 }
+
+
 
 /* Tags */
 

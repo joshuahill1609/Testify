@@ -6,7 +6,9 @@
         </a>
 			</div>
 			<ul class="navigation">
-				<li><a href="<%= user_url(current_user.id) %>">Me</a></li>
+				<% if current_user %>
+					<li><a href="<%= user_url(current_user.id) %>">Me</a></li>
+				<% end %>
 				<li><a href="<%= exams_url %>">Explore</a></li>
 				<li>
           <% if current_user %>
