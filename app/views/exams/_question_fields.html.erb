@@ -1,19 +1,25 @@
 <li class="question_<%= Time.now %>">
-<section class="new-question group" >
-		<p>
-		<%= f.label :question, "Multiple Choice Question" %>
-		</p>
-		<%= f.text_area :title, rows: 2 %>
-		<%= f.link_to_remove image_tag "question_remove.png" %>
-
-		<div class="correct-answer">
-			<%= f.fields_for :correct_answers %>
-			<%= f.link_to_add "", :correct_answers %>
-		</div>
+	<section class="new-question group" >
 	
-		<div class="answers">
-			<%= f.fields_for :answers %>
-			<%= f.link_to_add "Add a answer", :answers %>
+		<p><%= f.label :question, "Multiple Choice Question" %></p>
+		
+		<%= f.text_area :title, rows: 2 %>
+	    <%= f.hidden_field :_destroy %>
+	    <%= link_to "remove", '#', class: "remove_fields" %>
+		
+		<!--
+		<div class="correct-answer">
+			<#%= f.fields_for :correct_answers %>
+			<#%= f.link_to_add "", :correct_answers, class: "add-correct-answer" %>
 		</div>
-</section>
+		-->
+			
+		<div class="answers">			
+			<%= f.fields_for :answers do |builder| %>
+				<%= render 'answer_fields', f: builder %>
+			<% end %>
+			
+			<%= link_to_add_fields "Add a answer", f, :answers %>
+		</div>
+	</section>
 </li>

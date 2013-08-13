@@ -4,27 +4,46 @@
     </ul>
 </div>
 
-<div class="build-test-container">
-	<section class="form">
-		<%= nested_form_for @exam do |f| %>
-		<section class="exam-attr group">
-			<ul>
-			  <li><%= f.text_field :exam_name, placeholder: "Test Name" %></li>
-			  <li><%= f.text_field :exam_subject, placeholder: "Test Subject" %></li>
-		   </ul>
-		</section>
+<%= form_for @exam do |f| %>
+
+	<% if @exam.errors.any? %>
+	  <div class="error_messages">
+	    <h2><%= pluralize(@exam.errors.count, "error") %> prohibited this survey from being saved:</h2>
+	    <ul>
+	    <% @exam.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	<% end %>
+	
+	
+	<div class="build-test-container">
+		<section class="form">
 		
-		<%= f.hidden_field :user_id%>
-		<%= hidden_field_tag 'exam[user_id]', current_user.id %>
+			<section class="exam-attr group">
+				<ul>
+				  <li><%= f.text_field :exam_name, placeholder: "Test Name" %></li>
+				  <li><%= f.text_field :exam_subject, placeholder: "Test Subject" %></li>
+			   </ul>
+			</section>
+		
+			<%= f.hidden_field :user_id%>
+			<%= hidden_field_tag 'exam[user_id]', current_user.id %>
 
-		<ul class="sortable"><%= f.fields_for :questions %></ul>
-		<p id="add-q"><%= f.link_to_add "Add a question", :questions %></p>
+			<ul class="sortable">
+				<%= f.fields_for :questions do |builder| %></ul>
+				<%= render 'question_fields', f: builder %>
+				<% end %>
+				<%= link_to_add_fields "Add a question", f, :questions, :answers  %>
+			</ul>
 
-		<p id="save_exam"><%= f.submit "Submit" %></p>
-		<% end %>
-	</section>
-</div>
+			<p id="save_exam"><%= f.submit "Submit" %></p>
+		
+		</section>
+	</div>
+	
+	<%= render partial: "tags" %><br>
 
-<%= render partial: "tags" %><br>
 
-
+<% end %>
