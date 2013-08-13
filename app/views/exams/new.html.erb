@@ -22,15 +22,19 @@
 	
 	<%= f.label :test_subject %><br>
 	<%= f.text_field :exam_subject %>
+	
+	<%= f.hidden_field :user_id%>
+	<%= hidden_field_tag 'exam[user_id]', current_user.id %>
   </div>
   
   <%= f.fields_for :questions do |builder| %>
     <%= render 'question_fields', f: builder %>
   <% end %>
-  <%= link_to_add_fields "Add Question", f, :questions, :answers %>
+  <%= link_to_add_fields "Add Question", f, :questions, :correct_answers, :answers %>
   
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
 
