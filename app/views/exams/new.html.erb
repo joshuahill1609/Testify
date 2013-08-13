@@ -17,8 +17,8 @@
   <% end %>
   
   <div class="field">
-    <%= f.label :test_name %><br />
-    <%= f.text_field :exam_name %>
+    <%= f.label :test_name %><br>
+    <%= f.text_field :exam_name %><br>
 	
 	<%= f.label :test_subject %><br>
 	<%= f.text_field :exam_subject %>
@@ -27,11 +27,13 @@
 	<%= hidden_field_tag 'exam[user_id]', current_user.id %>
   </div>
   
-  <%= f.fields_for :questions do |builder| %>
-    <%= render 'question_fields', f: builder %>
-  <% end %>
-  <%= link_to_add_fields "Add Question", f, :questions, :correct_answers, :answers %>
-  
+  <ul class="sortable">
+	  <%= f.fields_for :questions do |builder| %>
+	    <%= render 'question_fields', f: builder %>
+	  <% end %>
+
+	  <%= link_to_add_fields "Add Question", f, :questions, :correct_answers, :answers %>	 
+  </ul>
   <div class="actions">
     <%= f.submit %>
   </div>
