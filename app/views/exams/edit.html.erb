@@ -1,21 +1,2 @@
-<%= nested_form_for @exam do |f| %>
-<p>
-  <%= f.label :exam_name %>
-  <%= f.text_field :exam_name %>
-
-  <%= f.label :exam_subject %>
-  <%= f.text_field :exam_subject %>
-</p>
-<%= f.hidden_field :user_id%>
-<%= hidden_field_tag 'exam[user_id]', current_user.id %>
-
-<%= f.fields_for :questions %>
-<p><%= f.link_to_add "Add a question", :questions %></p>
-
-
-<%= render partial: "tags" %><br>
-<%= render partial: "grades" %>
-
-<p><%= f.submit "Submit" %></p>
-<% end %>
+<%= render 'exam_builder' %>
 

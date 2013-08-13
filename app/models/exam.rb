@@ -17,11 +17,11 @@ class Exam < ActiveRecord::Base
 
   has_many :true_false_questions, dependent: :destroy
   
-  accepts_nested_attributes_for :true_false_questions
+  accepts_nested_attributes_for :true_false_questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   
   has_many :essay_questions, dependent: :destroy
   
-  accepts_nested_attributes_for :essay_questions
+  accepts_nested_attributes_for :essay_questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
   # class method for search bar on /exams
   def self.exam_name(exam_name, subject, created_by)
@@ -33,9 +33,9 @@ class Exam < ActiveRecord::Base
   end
 
   #combines correct answer with answers and shuffles order
-  def self.reorder(exam)
+  def reorder_answers
     answer_order = []
-    exam.questions.each do |q|
+    self.questions.each do |q|
       q.answers.each do |a|
         answer_order << a.body
       end
@@ -48,7 +48,12 @@ class Exam < ActiveRecord::Base
       answer_order.each do |i|
         AnswerOrder.create!(:content => i, :question_id => q.id)
       end
-    end    
+      answer_order = []
+    end  
   end
 
+  def self.reorder_questions(exam)
+
+    
+  end
 end

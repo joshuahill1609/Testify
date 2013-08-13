@@ -28,7 +28,7 @@ class ExamsController < ApplicationController
     @exam = Exam.new(params[:exam]) 
     if @exam.save
       
-      Exam.reorder(@exam)
+      @exam.reorder_answers
       
       flash[:notice] = "Successfully created Test"
       redirect_to @exam
