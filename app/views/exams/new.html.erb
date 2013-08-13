@@ -5,45 +5,32 @@
 </div>
 
 <%= form_for @exam do |f| %>
-
-	<% if @exam.errors.any? %>
-	  <div class="error_messages">
-	    <h2><%= pluralize(@exam.errors.count, "error") %> prohibited this survey from being saved:</h2>
-	    <ul>
-	    <% @exam.errors.full_messages.each do |msg| %>
-	      <li><%= msg %></li>
-	    <% end %>
-	    </ul>
-	  </div>
-	<% end %>
+  <% if @exam.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@exam.errors.count, "error") %> prohibited this survey from being saved:</h2>
+      <ul>
+      <% @exam.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :test_name %><br />
+    <%= f.text_field :exam_name %>
 	
-	
-	<div class="build-test-container">
-		<section class="form">
-		
-			<section class="exam-attr group">
-				<ul>
-				  <li><%= f.text_field :exam_name, placeholder: "Test Name" %></li>
-				  <li><%= f.text_field :exam_subject, placeholder: "Test Subject" %></li>
-			   </ul>
-			</section>
-		
-			<%= f.hidden_field :user_id%>
-			<%= hidden_field_tag 'exam[user_id]', current_user.id %>
-
-			<ul class="sortable">
-				<%= f.fields_for :questions do |builder| %></ul>
-				<%= render 'question_fields', f: builder %>
-				<% end %>
-				<%= link_to_add_fields "Add a question", f, :questions, :answers  %>
-			</ul>
-
-			<p id="save_exam"><%= f.submit "Submit" %></p>
-		
-		</section>
-	</div>
-	
-	<%= render partial: "tags" %><br>
-
-
+	<%= f.label :test_subject %><br>
+	<%= f.text_field :exam_subject %>
+  </div>
+  
+  <%= f.fields_for :questions do |builder| %>
+    <%= render 'question_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields "Add Question", f, :questions, :answers %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
+
