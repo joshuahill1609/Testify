@@ -7,7 +7,7 @@ class ExamsController < ApplicationController
   def new
     @exam = Exam.new
     @current_user_id = current_user.id
-    3.times do
+    1.times do
       question = @exam.questions.build
       question.correct_answers.build
       3.times { question.answers.build }
@@ -18,7 +18,7 @@ class ExamsController < ApplicationController
   def create
     @exam = Exam.new(params[:exam])
     if @exam.save
-      flash[:notice] = "Successfully created survey"
+      flash[:notice] = "Successfully created Test"
       redirect_to @exam
     else
       render :new
