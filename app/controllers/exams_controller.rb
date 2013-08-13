@@ -12,6 +12,15 @@ class ExamsController < ApplicationController
       question.correct_answers.build
       3.times { question.answers.build }
     end
+    
+    1.times do
+      true_false = @exam.true_false_questions.build
+      1.times {true_false.true_false_answers.build }
+    end
+    
+    1.times do
+      @exam.essay_questions.build
+    end
 
   end
 
@@ -27,7 +36,6 @@ class ExamsController < ApplicationController
 
   def show
     @exam = Exam.find(params[:id])
-    @questions = Question.where(exam_id = @exam.id)
     @letters = ["A", "B", "C", "D", "E", "F"]
 
     respond_to do |format|

@@ -1,0 +1,14 @@
+<li>
+<fieldset>
+	<%= f.label :content, "True/False Question" %><br />
+	<%= f.text_area :content, rows: "3" %><br />
+	<%= f.hidden_field :_destroy %>
+	<%= link_to "remove", '#', class: "remove_fields" %>
+
+	<%= f.fields_for :true_false_answers do |builder| %>
+	  <%= render 'true_false_answer_fields', f: builder %>
+	<% end %>
+</fieldset>
+</li>	
+
+	

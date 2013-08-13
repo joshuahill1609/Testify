@@ -1,5 +1,6 @@
 class Exam < ActiveRecord::Base
-  attr_accessible :exam_name, :exam_subject, :user_id, :questions_attributes, :tag_ids, :grade_level_ids
+  attr_accessible :exam_name, :exam_subject, :user_id, :questions_attributes, :true_false_questions_attributes, :essay_questions_attributes, 
+                  :tag_ids, :grade_level_ids
 
   validates :exam_name, :user_id, presence: true
 
@@ -15,7 +16,12 @@ class Exam < ActiveRecord::Base
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:title].blank? }, :allow_destroy => true
 
   has_many :true_false_questions, dependent: :destroy
-
+  
+  accepts_nested_attributes_for :true_false_questions
+  
+  has_many :essay_questions, dependent: :destroy
+  
+  accepts_nested_attributes_for :essay_questions
 
   # class method for search bar on /exams
   def self.exam_name(exam_name, subject, created_by)

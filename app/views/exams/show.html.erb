@@ -12,27 +12,57 @@
   <p class="exam_subject"><strong>Subject:</strong> <%= @exam.exam_subject %></p>
 
   <section class="exam_questions">
-    <% x = 1 %>
-    <% @exam.questions.each do |q| %>
-    <section class="question">
-      <%= x %>)<%= q.title %>
-      <% x += 1%>
-    </section>
+      <% x = 1 %>
+	  
+     <!-- Multiple Choice Questions Display --> 
+     <% @exam.questions.each do |q| %>
+    	<section class="question">
+     	    <%= x %>)<%= q.title %>
+      	 	<% x += 1%>
+   	 	</section>
 
-    <section class="question_answers">
-      <%= @letters[0] %>)<%= q.correct_answers.first.body %>
-      <% j = 1 %>
-      <% q.answers.each do |answer| %>
-        <section class="answer">
-          <%= @letters[j] %>)<%= answer.body %>
-          <% j += 1 %>
-        </section>
-      <% end %>
-    </section>
-
+		<!-- Multiple Choice Answers Display -->
+    	<section class="question_answers">
+      	  	<%= @letters[0] %>)<%= q.correct_answers.first.body %>
+     	   	<% j = 1 %>
+      	  	<% q.answers.each do |answer| %>
+        	<section class="answer">
+          	 	<%= @letters[j] %>)<%= answer.body %>
+         	  	<% j += 1 %>
+        	</section>
+      	  	<% end %>
+   	 	</section>
     <% end %>
-  </section>
+	
+	<!-- True/False Questions Display -->
+	<% @exam.true_false_questions.each do |q| %>
+		<section class="question">
+			<%= x %>)<%= q.content %>
+			<% x += 1 %>
+			
+			<!-- True/False Answers Display -->
+			<section class="question_answers">
+				<p>___ True ___ False</p>
+			</section>
+		</section>
+	<% end %>
+	
+	<!-- Essay Questions Display -->
+	<% @exam.essay_questions.each do |q| %>
+		<section class="question">
+			<%= x %>)<%= q.content%>
+			<% x += 1 %>
+			
+			<!-- Essay Question Answer Display -->
+			<section class="question_answers">
+				<p>Write answer in space provided</p>
+			</section>
+		</section>
+	<% end %>
+	
+  </section><!-- exam_questions section closure-->
 
+ 
 </div>
 
 <div class="test-info">
