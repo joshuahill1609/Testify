@@ -25,8 +25,11 @@ class ExamsController < ApplicationController
   end
 
   def create
-    @exam = Exam.new(params[:exam])
+    @exam = Exam.new(params[:exam]) 
     if @exam.save
+      
+      Exam.reorder(@exam)
+      
       flash[:notice] = "Successfully created Test"
       redirect_to @exam
     else
@@ -37,7 +40,7 @@ class ExamsController < ApplicationController
   def show
     @exam = Exam.find(params[:id])
     @letters = ["A", "B", "C", "D", "E", "F"]
-
+    
     respond_to do |format|
       format.html
       format.pdf do

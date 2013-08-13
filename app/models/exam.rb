@@ -32,4 +32,23 @@ class Exam < ActiveRecord::Base
     end
   end
 
+  #combines correct answer with answers and shuffles order
+  def self.reorder(exam)
+    answer_order = []
+    exam.questions.each do |q|
+      q.answers.each do |a|
+        answer_order << a.body
+      end
+      q.correct_answers.each do |c|
+        answer_order << c.body
+      end
+    
+      answer_order = answer_order.shuffle.shuffle.shuffle
+    
+      answer_order.each do |i|
+        AnswerOrder.create!(:content => i, :question_id => q.id)
+      end
+    end    
+  end
+
 end

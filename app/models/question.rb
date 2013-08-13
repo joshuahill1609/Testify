@@ -11,4 +11,5 @@ class Question < ActiveRecord::Base
   has_many :correct_answers, dependent: :destroy
   accepts_nested_attributes_for :correct_answers, :reject_if => lambda { |a| a[:body].blank? }, :allow_destroy => true
 
+  has_many :answer_orders, dependent: :destroy
 end
