@@ -14,6 +14,7 @@ class Exam < ActiveRecord::Base
 
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:title].blank? }, :allow_destroy => true
 
+  has_many :true_false_questions, dependent: :destroy
 
 
   # class method for search bar on /exams

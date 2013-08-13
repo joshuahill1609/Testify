@@ -29,7 +29,10 @@
 	  <%= link_to_add_fields "Add Question", f, :questions, :correct_answers, :answers %>	 
   </ul>
   
+  <%= render partial: "tags" %><br>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>
