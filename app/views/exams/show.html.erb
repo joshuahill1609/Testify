@@ -1,5 +1,7 @@
 <div class="test-nav-bar group">
   <p><%= link_to "Print (PDF)", exam_url(@exam, format: "pdf")%></p>
+  <p><%= link_to "Print Answer Key (PDF)", answer_key_exam_url(@exam, format: "pdf")%></p>
+  
   <ul>
     <li><%= link_to "Edit", edit_exam_url %></li>
     <li><%= link_to "Delete", exam_url(@exam), method: "delete"%></li>

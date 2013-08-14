@@ -15,11 +15,11 @@ class Exam < ActiveRecord::Base
 
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:title].blank? }, :allow_destroy => true
 
-  has_many :true_false_questions, dependent: :destroy
+  has_many :true_false_questions, order: :position, dependent: :destroy
   
   accepts_nested_attributes_for :true_false_questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   
-  has_many :essay_questions, dependent: :destroy
+  has_many :essay_questions, order: :position, dependent: :destroy
   
   accepts_nested_attributes_for :essay_questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 

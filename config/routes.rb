@@ -2,7 +2,9 @@ Testify::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :exams do
-    collection { post :sort }
+    member do
+      get 'answer_key'
+    end
   end
 
 

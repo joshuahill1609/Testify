@@ -52,6 +52,19 @@ class ExamsController < ApplicationController
       end
     end
   end
+  
+  def answer_key
+    @exam = Exam.find(params[:id])
+    
+    respond_to do |format|
+      format.pdf do
+        pdf = AnswerKeyPdf.new(@exam, current_user)
+        send_data pdf.render, filename: "test_#{@exam.exam_name}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
+  end
 
   def edit
     @exam = Exam.find(params[:id])
