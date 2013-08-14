@@ -39,6 +39,7 @@ class ExamsController < ApplicationController
 
   def show
     @exam = Exam.find(params[:id])
+    @questions = @exam.questions.order("position")
     @letters = ["A", "B", "C", "D", "E", "F"]
     
     respond_to do |format|
@@ -59,7 +60,7 @@ class ExamsController < ApplicationController
   def update
     @exam = Exam.find(params[:id])
     if @exam.update_attributes(params[:exam])
-
+      @exam.reorder_answers
       redirect_to @exam
     else
       render :edit

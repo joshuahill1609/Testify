@@ -22,9 +22,12 @@
   </div>
   
   <ul class="sortable">
+	 
+	
 	  <%= f.fields_for :questions do |builder| %>
-	    <%= render 'question_fields', f: builder %>
+	    	<%= render 'question_fields', f: builder %>
 	  <% end %>
+
 	  
 	  <%= f.fields_for :true_false_questions do |builder| %>
 	  	<%= render 'true_false_question_fields', f: builder %>
@@ -34,8 +37,8 @@
 	  	<%= render 'essay_question_fields', f: builder %>
 	  <% end %>
 		
-	  <%= link_to_add_fields "Add Question", f, :questions, :correct_answers, :answers %>
-	  <%= link_to_add_fields "Add True/False Question", f, :true_false_questions, 																:true_false_answers %>
+	  <%= link_to_add_fields "Add Question", f, :questions, 		  			:correct_answers, :answers %>
+	  <%= link_to_add_fields "Add True/False Question", f, 			:true_false_questions, :true_false_answers %>
 	  <%= link_to_add_fields "Add Essay Question", f, :essay_questions %> 
   </ul>
   

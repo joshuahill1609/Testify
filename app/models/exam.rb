@@ -6,7 +6,7 @@ class Exam < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :questions, dependent: :destroy
+  has_many :questions, order: :position, dependent: :destroy
   has_many :examtags
   has_many :tags, through: :examtags
 
@@ -36,6 +36,7 @@ class Exam < ActiveRecord::Base
   def reorder_answers
     answer_order = []
     self.questions.each do |q|
+      AnswerOrder.destroy_all(:question_id => q.id)
       q.answers.each do |a|
         answer_order << a.body
       end
@@ -52,8 +53,4 @@ class Exam < ActiveRecord::Base
     end  
   end
 
-  def self.reorder_questions(exam)
-
-    
-  end
 end

@@ -52,4 +52,6 @@ gem 'nested_form'
 
 gem 'prawn'
 
+gem 'acts_as_list'
+
 

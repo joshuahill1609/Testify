@@ -1,7 +1,8 @@
-<li>
+<li class="question_item">
 	<fieldset>
-	  <%= f.label :title, "Question" %><br />
-	  <%= f.text_area :title, rows: "3" %><br />
+	  <%= f.label :title, "Question" %><br>
+	  <%= f.text_area :title, rows: "3" %><br>
+	  <%= f.hidden_field :position, class: "question_position"%>
 	  <%= f.hidden_field :_destroy %>
 	  <%= link_to "remove", '#', class: "remove_fields" %>
 
