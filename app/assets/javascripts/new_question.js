@@ -17,5 +17,17 @@ $(document).ready(function(){
 		return false;
 	})
 	
-
+	$(".log-in").click(function(){
+		$(".log-in").toggleClass("log-in-page")
+		$(".sign-up").toggleClass("sign-up-page")
+		$(".sign-up-form").toggleClass("log-in-page-toggle")
+		$(".log-in-form").toggleClass("sign-up-page-toggle")		
+	})
+	
+	$(".sign-up").click(function(){
+		$(".log-in").toggleClass("log-in-page")
+		$(".sign-up").toggleClass("sign-up-page")
+		$(".sign-up-form").toggleClass("log-in-page-toggle")
+		$(".log-in-form").toggleClass("sign-up-page-toggle")
+	})
 })

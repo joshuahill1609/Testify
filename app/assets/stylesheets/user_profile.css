@@ -86,3 +86,16 @@
 	font-family: arial;
 	font-size: 18px;
 }
+
+.profile-container > p {
+    display: block;
+    width: 200px;
+    font-family: arial;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    background-color: #E44424;
+    padding:3px;
+    padding-left: 5px;
+	margin-left: 15px;
+}

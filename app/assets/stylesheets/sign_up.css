@@ -21,11 +21,13 @@
 	width: 250px;
 	float: right;
 	margin: 80px 50px 0 0;
-  background: rgba(103, 188, 219, 0.90);
+  	background: rgba(103, 188, 219, 0.90);
 	border-radius: 10px;
-
 }
 
+.log-in-page-toggle {
+	display: none;
+}
 
 .sign-up-form > form {
   text-align: center;
@@ -36,10 +38,15 @@
   border-top: 0;
 }
 
+.sign-up-form > form > label {
+  display: none;
+  border: 1px solid red;
+}
+
 .sign-up-form > form > input {
-	border-radius: 3px;
-	padding: 4px;
-	width: 99%;
+  border-radius: 3px;
+  padding: 4px;
+  width: 99%;
   margin-top: 4px;
   padding-left: 8px;
   outline: none;
@@ -47,24 +54,11 @@
   font-size: 15px;
 }
 
-.focusField {
-  border:solid 2px #73A6FF;
-         background:#EFF5FF;
-         color:#000;
-}
-
-.idleField{
-  background:#EEE;
-      color: #6F6F6F;
-      border: solid 2px #DFDFDF;
-}
-
 .sign-up-form > form > .sign-up-button {
-	width: 100px;
-	border-radius: 5px;
+  width: 100px;
+  border-radius: 5px;
   color :#FFF;
   font-size: 15px;
-  /*background-color: #E44424;*/
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
   border: 0;
 }
@@ -80,18 +74,11 @@
   float: left;
   margin-top: 80px;
   padding: 0;
-  /*background: rgba(0, 0, 0, 0.40);
-  border-radius: 20px;
-  padding: 20px 30px 10px 20px;*/
 }
 
 .logo-display > img {
   width: 250px;
   height: auto;
- /* background: rgba(0, 0, 0, .60);
-  padding:3px;
-  padding-right: 20px;
-  border-radius: 4px;*/
 }
 
 .logo-display > .tag-line {
@@ -100,8 +87,7 @@
   font-family: arial;
   font-size: 20px;
   text-align: right;
-/*  font-weight: bold;
-*/  color: white;
+  color: white;
   background-color: #E44424;
   padding:3px;
   padding-right: 5px;
@@ -166,7 +152,9 @@
   color: #E44424;
 }
 
+
 .features > ul > li > p {
   padding: 0px 15px;
   color: #555;
 }
+

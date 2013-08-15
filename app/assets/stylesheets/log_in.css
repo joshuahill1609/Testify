@@ -1,0 +1,60 @@
+.log-in-page {
+	display: none;
+}
+
+.sign-up-page {
+	display: none;
+}
+
+/* Sign Up (new_users_url) */
+
+.log-in-form {
+	display: block;
+	width: 250px;
+	float: right;
+	margin: 80px 50px 0 0;
+    background: rgba(103, 188, 219, 0.90);
+	border-radius: 10px;
+}
+
+.sign-up-page-toggle {
+	display: none;
+}
+
+.log-in-form > form {
+  text-align: center;
+  padding: 20px;
+  margin: 0 10px 0 0;
+  color: black;
+  font-family: arial;
+  border-top: 0;
+}
+
+.log-in-form > form > label {
+	display: none;
+}
+
+.log-in-form > form > input {
+	border-radius: 3px;
+	padding: 4px;
+	width: 99%;
+  margin-top: 4px;
+  padding-left: 8px;
+  outline: none;
+  height: 36px;
+  font-size: 15px;
+}
+
+.log-in-form > form > .log-in-button {
+	width: 100px;
+	border-radius: 5px;
+  color :#FFF;
+  font-size: 15px;
+  /*background-color: #E44424;*/
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border: 0;
+}
+
+.log-in-form > form > .log-in-button:hover {
+  background: #E44424;
+}

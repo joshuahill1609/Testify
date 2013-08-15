@@ -1,16 +1,16 @@
-<div class="pro-form-container">
 
+<div class="pro-form-container">
 
 <h1>Profile Information</h1>
 
 <form action="<%= user_url(current_user) %>" method="post">
   <input type="hidden" name="_method" value="put">
 
-  <%= render partial: "shared/profile_form", locals: { user: current_user} %>
+  <%= render partial: "profile_form", locals: { user: current_user} %>
 
   <%= render partial: "shared/csrf" %>
 
-  <br><input type="submit" value="Finish">
+  <br><input type="submit" value="Get Started">
 </form>
 
 </div>

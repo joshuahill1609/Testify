@@ -5,11 +5,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    p "params!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    p params
-    p params[:user][:username]
     log_in(params[:user][:username], params[:user][:password])
-    redirect_to @user
+    if current_user
+      redirect_to @user
+    else
+      redirect_to new_user_url
+    end
   end
 
   def destroy

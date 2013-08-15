@@ -1,0 +1,65 @@
+.pro-form-container {
+	display: block;
+	width: 50%;
+	float: left;
+	margin: 40px 40px 0 40px;
+  	background: rgba(103, 188, 219, 0.90);
+	border-radius: 10px;
+	
+}
+
+.pro-form-container > h1 {
+	display: block;
+	font-family: arial;
+	color: white;
+	padding: 10px 0 0 15px;
+}
+
+.pro-form-container > form {
+    text-align: left;
+    padding: 20px;
+    margin: 0 10px 0 0;
+    color: black;
+    font-family: arial;
+    border-top: 0;
+}
+
+.pro-form-container > form > label {
+	display: block;
+	color: white;
+	margin-top: 10px;
+}
+
+.pro-form-container > form > input[type=text] {
+    border-radius: 3px;
+    padding: 4px;
+    width: 99%;
+    margin-top: 4px;
+    padding-left: 8px;
+    outline: none;
+    height: 36px;
+    font-size: 15px;
+}
+
+.pro-form-container > form > input[type=text]:focus {
+	outline: none;
+}
+
+.pro-form-container > form > input[type=submit] {
+	width: 100px;
+	margin: 15px 0;
+	padding: 8px;
+	border-radius: 5px;
+ 	color :#FFF;
+  	font-size: 15px;
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  	border: 0;
+}
+
+.profile-text {
+	width: 30%;
+	height: 300px;
+	margin: 40px 0 0 0;
+	float: left;
+	border: 1px solid red;
+}

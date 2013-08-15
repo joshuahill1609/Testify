@@ -6,7 +6,7 @@ class ExamPdf < Prawn::Document
     super()
     @exam = exam
     @current_user = current_user
-    @num_of_questions = 0
+    @num_of_questions = 1
     exam_name
     subject
     student_header
@@ -31,16 +31,31 @@ class ExamPdf < Prawn::Document
 
   def place_questions
     move_down 10
-    i = 1
+
     @exam.questions.each do |question|
       move_down 10
-      text i.to_s + ") " + "#{question.title}"
+      text @num_of_questions.to_s + ") " + "#{question.title}"
       place_correct_answer(question)
       place_answers(question)
 
       @num_of_questions += 1
-      i += 1
     end
+    
+    @exam.true_false_questions.each do |question|
+      move_down 10
+      text @num_of_questions.to_s + ") " + "#{question.content}"
+      text "___ True ___ False"
+      
+      @num_of_questions += 1
+    end
+    
+    @exam.essay_questions.each do |question|
+      move_down 10
+      text @num_of_questions.to_s + ") " + "#{question.content}"
+      
+      @num_of_questions += 1
+    end
+    
   end
 
   def place_correct_answer(question)
@@ -59,7 +74,7 @@ class ExamPdf < Prawn::Document
   end
 
   def place_footer
-    text_box "____ / #{@num_of_questions}", valign: :bottom
+    text_box "____ / #{@num_of_questions - 1}", valign: :bottom
   end
 
 end

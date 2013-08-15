@@ -14,7 +14,8 @@
           <% if current_user %>
             <%= button_to "Log Out", session_url(current_user), method: "delete"%>
           <% else %>
-            <%= button_to "Log In", new_session_url, method: "get"%>
+			<%= link_to "Sign Up", "#", class: "sign-up sign-up-page"%>
+            <%= link_to "Log In", "#", class: "log-in"%>
           <% end %>
         </li>
 			</ul>

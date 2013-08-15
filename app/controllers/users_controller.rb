@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     if @user.save
       log_in(params[:user][:username], params[:user][:password])
       redirect_to "/users/#{current_user.id}/edit"
+    else
+      render :new
     end
   end
 

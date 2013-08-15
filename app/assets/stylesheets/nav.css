@@ -57,3 +57,13 @@ nav ul li input {
 nav ul li input:hover {
 	color: #E44424;
 }
+
+/* toggles */
+
+.log-in-page {
+	display: none;
+}
+
+.sign-up-page {
+	display: none;
+}

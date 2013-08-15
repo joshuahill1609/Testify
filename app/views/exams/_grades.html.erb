@@ -2,7 +2,8 @@
 	<p>Select Grade</p>
 	<select name="exam[grade_level_ids][]">
 	  <% GradeLevel.all.each do |grade| %>
-	  <option value="<%= grade.id %>"><%= grade.grade_level %></option>
+	  <option value="<%= grade.id %>"  <%= "selected" if @exam.grade_levels.include?(grade) %>>
+		  <%= grade.grade_level %></option>
 	  <% end %>
 	</select>
 </section>

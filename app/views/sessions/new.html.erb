@@ -1,14 +1,64 @@
-<h1>Log In</h1>
+<div class="container">
+	<div class="content group">
 
-<form action="<%= sessions_url %>" method="post">
-  <label for="username">Username</label>
-  <input type="text" id="username" name="user[username]">
+    <section class="logo-display">
+      <%= image_tag "testify_logo.png"%><br>
 
-  <label for="password">Password</label>
-  <input type="password" id="password" name="user[password]">
+      <span class="tag-line">
+        The simplest way to manage tests.
+      </span>
+    </section>
 
-  <%= render partial: "shared/csrf" %>
+    <section class="log-in-form">
 
-  <input type="submit" value="Log In">
+		<form action="<%= sessions_url %>" method="post">
+		  <label for="username">Username</label>
+		  <input type="text" id="username" name="user[username]"
+		   placeholder="Username">
 
-</form>
+		  <label for="password">Password</label>
+		  <input type="password" id="password" name="user[password]"
+		   placeholder="Password"><br><br>
+
+		  <%= render partial: "shared/csrf" %>
+
+		  <input type="submit" value="Log In" class="log-in-button">
+
+		</form>
+		
+    </section>
+
+    <section class="divide-bar">
+      <div class="bar">
+      </div>
+    </section>
+
+    <section class="marketing-speak group">
+      <div class="features">
+        <ul>
+          <li>
+            <span>Build</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+          <li>
+            <span>Store</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+          <li>
+            <span>Share</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+	</div>
+</div>
+
