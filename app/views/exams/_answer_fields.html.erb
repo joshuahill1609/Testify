@@ -1,6 +1,6 @@
-<fieldset>
+<fieldset class="answers">
   <%= f.label :body, "Answer" %>
-  <%= f.text_field :body %>
+  <%= f.text_field :body, placeholder: "Enter a answer..." %>
   <%= f.hidden_field :_destroy %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
+  <%= link_to "X", '#', class: "remove_fields remove-answer-field" %>
 </fieldset>

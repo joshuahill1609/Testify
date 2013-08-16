@@ -1,51 +1,75 @@
-<%= form_for @exam do |f| %>
-  <% if @exam.errors.any? %>
-    <div class="error_messages">
-      <h2><%= pluralize(@exam.errors.count, "error") %> prohibited this survey from being saved:</h2>
-      <ul>
-      <% @exam.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  <div class="field">
-    <%= f.label :test_name %><br>
-    <%= f.text_field :exam_name %><br>
-	
-	<%= f.label :test_subject %><br>
-	<%= f.text_field :exam_subject %>
-	
-	<%= f.hidden_field :user_id%>
-	<%= hidden_field_tag 'exam[user_id]', current_user.id %>
-  </div>
-  
-  <ul class="sortable">
-	 
-	
-	  <%= f.fields_for :questions do |builder| %>
-	    	<%= render 'question_fields', f: builder %>
-	  <% end %>
-
-	  
-	  <%= f.fields_for :true_false_questions do |builder| %>
-	  	<%= render 'true_false_question_fields', f: builder %>
-	  <% end %>
-		
-	  <%= f.fields_for :essay_questions do |builder| %>
-	  	<%= render 'essay_question_fields', f: builder %>
-	  <% end %>
-		
-	  <%= link_to_add_fields "Add Question", f, :questions, 		  			:correct_answers, :answers %>
-	  <%= link_to_add_fields "Add True/False Question", f, 			:true_false_questions, :true_false_answers %>
-	  <%= link_to_add_fields "Add Essay Question", f, :essay_questions %> 
+<div class="add-question-bar width-toggle group">
+  <span class="add-question">Add a Question</span>  
+  <ul class="question-options questions-toggle">
+    <li id="mc-q">Multiple Choice</li>
+    <li id="tf-q">True/False</li>
+    <li id="es-q">Essay</li>
+    <li class="close">x</li>
   </ul>
-  
-  <%= render partial: "tags" %><br>
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
-<% end %>
+</div>
+
+<div class="build-test-container">
+  <%= form_for @exam do |f| %>
+    <% if @exam.errors.any? %>
+      <div class="error_messages">
+        <h2><%= pluralize(@exam.errors.count, "error") %> prohibited this
+    	   survey from being saved:</h2>
+        <ul>
+        <% @exam.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="exam-attrs">
+      <%= f.label :test_name, "Test Name *" %><br>
+      <%= f.text_field :exam_name %><br>
+
+    <%= f.label :test_subject, "Subject *" %><br>
+    <%= f.text_field :exam_subject, placeholder: "What's this test about?" %>
+
+    <%= f.hidden_field :user_id%>
+    <%= hidden_field_tag 'exam[user_id]', current_user.id %>
+    </div>
+    
+    <ul class="sortable">
+      <%= f.fields_for :questions do |builder| %>
+        	<%= render 'question_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields "Add Question", f, :questions,
+                                                :correct_answers, 
+                                                :answers %>
+
+      <%= f.fields_for :true_false_questions do |builder| %>
+      	<%= render 'true_false_question_fields', f: builder %>
+      <% end %>   
+      <%= link_to_add_fields "Add True/False Question", f, :true_false_questions,
+                                                           :true_false_answers %>
+                                                         
+      <%= f.fields_for :essay_questions do |builder| %>
+      	<%= render 'essay_question_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields "Add Essay Question", f, :essay_questions %> 
+    </ul>
+    
+    <%= render partial: "tags" %><br>  
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+</div>
+
+<div class="tags-container">
+  <ul>
+    <% Tag.all.each do |tag|%>
+    <li>
+      <label for="exam_tag_ids_<%= tag.id %>" class="tag <%="tags-clicked" if @exam.tags.include?(tag) %>">
+       <%= tag.tag_title.upcase %>
+     </label>
+    </li>
+    <% end %>
+  </ul>
+</div>

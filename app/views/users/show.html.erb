@@ -2,23 +2,21 @@
   <p><%= link_to "New Test", new_exam_url %></p>
   <ul>
     <li><%= link_to "Edit Profile", edit_user_url(@user)%></li>
-    <li></li>
   </ul>
 </div>
 
-
 <div class="profile-container">
-<h1>Hey <%= @user.username.capitalize %>! </h1>
+  <h1>Hey <%= @user.username.capitalize %>! </h1>
 
-<p>Your exams:</p>
-<ul>
-<% @exams.each do |exam| %>
-  <li><a href="/exams/<%= exam.id %>">
-    Test Name: <%= exam.exam_name %><br>Subject: <%= exam.exam_subject %>,
-    Created By: <%= exam.user.username %>, Last Updated: <%= exam.updated_at.strftime("%D") %>
-  </a>
-</li><br>
-<% end %>
-</ul>
+  <p>Your exams:</p>
+  <ul>
+    <% @exams.each do |exam| %>
+      <li><a href="/exams/<%= exam.id %>">
+        Test Name: <%= exam.exam_name %><br>Subject: <%= exam.exam_subject %>,
+        Created By: <%= exam.user.username %>, Last Updated: <%= exam.updated_at.strftime("%D") %>
+      </a>
+    </li><br>
+    <% end %>
+  </ul>
 
 </div>

@@ -117,34 +117,21 @@
 
 /* Tags Box */
 
-.exam_tags {
-
+.tags-container-show {
+  display: inline-block;
+  margin: 20px 0 0 40px;
+  width: 150px;
+  box-shadow: 10px 10px 10px #888888;
 }
 
-.exam_tags > ul {
+.tags-container-show > ul {
+  background: white;
+  padding: 10px;
 }
 
-.exam_tags > ul > li {
-	padding: 10px;
-	font-family: arial;
+.tag-show {
+  display: block;
+  font-family: arial;
+  padding: 3px 0 3px 10px;
+  color: #AAA;
 }
-
-.exam_tags > ul > li:first-child {
-	display: none;
-}
-
-/* Grade Level Box */
-
-.exam_grade_level {
-	
-}
-
-.exam_grade_level > ul {
-
-}
-
-.exam_grade_level > ul > li {
-	font-family: arial;
-	text-align: center;
-}
-

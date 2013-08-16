@@ -13,19 +13,19 @@
 		  <%= text_field_tag :created_by, params[:created_by] %>
 
 		  <%= submit_tag "Search", name: nil %>
-
 		<% end %>
 	</section>
-<ul>
-<% @exams.each do |exam| %>
-  <li><a href="exams/<%= exam.id %>">
-    Test Name: <span class="color"><%= exam.exam_name %></span><br>
-	Subject:  <span class="color"><%= exam.exam_subject %></span>,
-    Created By:  <span class="color"><%= exam.user.username %></span>,
-	Last Updated: <span class="color"><%= exam.updated_at.strftime("%D") %></span>
-  </a>
-  </li><br>
-<% end %>
-</ul>
+  <ul>
+    <% @exams.each do |exam| %>
+      <li>
+        <a href="exams/<%= exam.id %>">
+          Test Name: <%= exam.exam_name %><br>
+      	  Subject:  <%= exam.exam_subject %>
+          Created By: <%= exam.user.username %>
+      	  Last Updated: <%= exam.updated_at.strftime("%D") %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 
 </div>

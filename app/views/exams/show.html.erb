@@ -65,27 +65,11 @@
 
 </div>
 
-<div class="test-info">
+<div class="tags-container-show">
 	<ul>
-		<li>
-			<section class="exam_tags">
-			  <ul>
-			    <li class="tag">Tags</li>
-			    <% @exam.tags.each do |tag| %>
-			    <li><%= tag.tag_title %></li>
-			    <% end %>
-			  </ul>
-			</section>
-		</li>
-		<li>
-			<section class="exam_grade_level">
-			  <ul>
-			    <% @exam.grade_levels.each do |grade| %>
-			      <li><%= grade.grade_level %><br> grade</li>
-			    <% end %>
-			  </ul>
-			</section>
-		</li>
-	</ul>
+	  <% @exam.tags.each do |tag| %>
+		  <li class="tag-show"><%= tag.tag_title %></li>
+		<% end %>
+ </ul>
 </div>
 
