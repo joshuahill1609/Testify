@@ -1,23 +1,24 @@
 <header>
-		<nav class="group">
-			<div class="logo">
-        <a href="<%= root_url %>">
-				  <%= image_tag "testify_logo_small.png"%>
-        </a>
-			</div>
-			<ul class="navigation">
-				<% if current_user %>
-					<li><a href="<%= user_url(current_user.id) %>">Me</a></li>
-				<% end %>
-				<li><a href="<%= exams_url %>">Explore</a></li>
-				<li>
-          <% if current_user %>
-            <%= button_to "Log Out", session_url(current_user), method: "delete"%>
-          <% else %>
-			<%= link_to "Sign Up", "#", class: "sign-up sign-up-page"%>
-            <%= link_to "Log In", "#", class: "log-in"%>
-          <% end %>
-        </li>
-			</ul>
-		</nav>
-	</header>
+  <nav class="group">
+    <div class="logo">
+      <a href="<%= current_user ? user_url(current_user.id) : root_url %>">
+        <%= image_tag "testify_logo_small.png"%>
+      </a>
+    </div>
+    <ul class="navigation">
+      <% if current_user %>
+        <li><a href="<%= user_url(current_user.id) %>">Me</a></li>
+      <% end %>
+      <li><a href="<%= exams_url %>">Explore</a></li>
+      <li>
+      <% if current_user %>
+        <%= button_to "Log Out", session_url(current_user),
+          method: "delete"%>
+      <% else %>
+      <%= link_to "Sign Up", "#", class: "sign-up sign-up-page"%>
+        <%= link_to "Log In", "#", class: "log-in"%>
+      <% end %>
+      </li>
+    </ul>
+	</nav>
+</header>

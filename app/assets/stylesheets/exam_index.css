@@ -1,58 +1,72 @@
 .exams-container {
-	width: 90%;
+  width: 90%;
+	min-width: 700px;
+  max-width: 1000px;
 	margin: auto;
-	margin-top: 20px;
-  padding-top: 10px;
-  background: white;
+  margin-top: 20px;
+  padding-top: 20px;
+  min-height: 200px;
+	background: white;
   box-shadow: 10px 10px 10px #888888;
 }
 
-.exams-container > .search {
-	width: 95%;
-	margin: auto;
-	background: #A2AB58;
-	border-radius: 4px;
-	font-family: arial;
-	color: white;
+.search-sub-nav {
+  width: 100%;
+  background: #A2AB58;
 }
 
-.exams-container > .search > form {
-  padding: 3px;
+.search > form {
+  width: 800px;
+  margin: auto;
+  padding: 8px;
 }
 
-.exams-container > .search > form > input[type=text] {
-	font-family: arial;
+.search > form > label {
+  font-family: arial;
+  color: white;
+  margin-left: 15px;
+}
+
+.search > form > input[type=text] {
   padding: 5px;
+  border-radius: 4px;
 }
 
-.exams-container > .search > form > input[type=submit] {
-	width: 50px;
-	margin: 15px 0 0 5px;
-	padding: 8px;
-	border-radius: 5px;
- 	color :#FFF;
-  font-size: 10px;
+.search > form > input[type=submit] {
+  width: 70px;
+  height: 22px;
+  margin-left: 15px;
+  font-family: arial;
+  font-size: 14px;
+  border-radius: 4px;
+  color :#FFF;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
-  border: 0;
 }
+
+
+/* Exams Container */
 
 .exams-container > ul {
-	margin-top: 20px;
-  width: 90%;
-  margin: auto;
+	padding-left: 25px;
+	margin-top: 10px;
 }
-
 .exams-container > ul > li {
-  margin-top: 10px;
-	background-color:  rgba(103, 188, 219, 0.90);
+	width: 85%;
 	border-radius: 4px;
 	padding: 8px;
-}
-
-.exams-container > ul > li:first-child {
-  margin-top: 20px;
 }
 
 .exams-container > ul > li > a {
-	color: white;
+	color: #AAA;
+	font-family: arial;
+}
+
+.exams-container > ul > li > a > span:first-child {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.exams-container > ul > li > a > span {
+  font-weight: bold;
+  font-size: 18px;
 }

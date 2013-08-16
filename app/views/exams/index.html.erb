@@ -1,28 +1,29 @@
+<div class="search-sub-nav">
+  <section class="search">
+  	<%= form_tag exams_path, method: "get" do %>
+
+  	  <%= label_tag "Test Name:"%>
+  	  <%= text_field_tag :exam_name, params[:exam_name] %>
+
+  	  <%= label_tag "Subject:" %>
+  	  <%= text_field_tag :subject, params[:subject] %>
+
+  	  <%= label_tag "Created By:" %>
+  	  <%= text_field_tag :created_by, params[:created_by] %>
+
+  	  <%= submit_tag "Search", name: nil %>
+  	<% end %>
+  </section>
+</div>
 <div class="exams-container">
-
-	<section class="search">
-		<%= form_tag exams_path, method: "get" do %>
-
-		  <%= label_tag "Test Name:"%>
-		  <%= text_field_tag :exam_name, params[:exam_name] %>
-
-		  <%= label_tag "Subject:" %>
-		  <%= text_field_tag :subject, params[:subject] %>
-
-		  <%= label_tag "Created By:" %>
-		  <%= text_field_tag :created_by, params[:created_by] %>
-
-		  <%= submit_tag "Search", name: nil %>
-		<% end %>
-	</section>
   <ul>
     <% @exams.each do |exam| %>
       <li>
         <a href="exams/<%= exam.id %>">
-          Test Name: <%= exam.exam_name %><br>
-      	  Subject:  <%= exam.exam_subject %>
-          Created By: <%= exam.user.username %>
-      	  Last Updated: <%= exam.updated_at.strftime("%D") %>
+          <span><%= exam.exam_name %></span><br>
+      	  <span>Subject</span>  <%= exam.exam_subject %>
+          <span>Created By</span> <%= exam.user.username %>
+      	  <span>Last Updated</span> <%= exam.updated_at.strftime("%D") %>
         </a>
       </li>
     <% end %>

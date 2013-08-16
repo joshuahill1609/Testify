@@ -1,15 +1,8 @@
 module ApplicationHelper
 
   def log_in(username, password)
-    p "username"
-    p username
-    p password
-
     @user = User.find_by_username(username)
-    p "user!!"
-    p @user
     if (@user && @user.authenticate(password))
-      p "now here!!!!!"
       @user.session_token = SecureRandom.urlsafe_base64(6)
       @user.save!
 
@@ -28,7 +21,6 @@ module ApplicationHelper
   def current_user
     @current_user || User.find_by_session_token(session[:session_token])
   end
-
 
   def link_to_add_fields(name, f, association, correct_answer_child = nil, child_association = nil)
     new_object = f.object.send(association).klass.new

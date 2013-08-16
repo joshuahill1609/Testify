@@ -5,18 +5,22 @@
   </ul>
 </div>
 
-<div class="profile-container">
+<div class="profile-container group">
   <h1>Hey <%= @user.username.capitalize %>! </h1>
 
-  <p>Your exams:</p>
+  <p>Your tests:</p>
   <ul>
     <% @exams.each do |exam| %>
-      <li><a href="/exams/<%= exam.id %>">
+      <li>
+        <a href="/exams/<%= exam.id %>">
         Test Name: <%= exam.exam_name %><br>Subject: <%= exam.exam_subject %>,
-        Created By: <%= exam.user.username %>, Last Updated: <%= exam.updated_at.strftime("%D") %>
-      </a>
-    </li><br>
+        Created By: <%= exam.user.username %>, 
+        Last Updated: <%= exam.updated_at.strftime("%D") %>
+        </a>
+      </li><br>
     <% end %>
   </ul>
+</div>
 
+<div class="hidden-footer">
 </div>
