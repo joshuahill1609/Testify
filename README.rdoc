@@ -26,11 +26,11 @@ Acts As List - to aid in ordering the test questions.
 
 = ToDo
 
-+ Fix pdf formatting.
-+ Change design to make question Drag & Drop in test builder user friendly.
-+ Change CSS sizing on sign up page.
-+ Change user management over to Devise.
-+ Add facebook logoin usiing OmniAuth.
+* Fix pdf formatting.
+* Change design to make question Drag & Drop in test builder user friendly.
+* Change CSS sizing on sign up page.
+* Change user management over to Devise.
+* Add facebook logoin usiing OmniAuth.
 
 
 
