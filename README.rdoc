@@ -1,5 +1,6 @@
-Test-ify
 =====================================
+Test-ify
+
 I started building Test-ify as my capstone project while at App Academy. The idea came in college
 while taking a test that had been built and formatted using microsoft word and I thought there had
 to be an easier way. Test-ify is designed to be the best possible way for teachers to manage their tests. 
@@ -9,8 +10,10 @@ can be saved with an account and reused for next semester or next year without h
 saved it on your computer. Give it test drive at test-ify.com. 
 Use- username: testguy, password: testguy, if you would like to bypass the sign up process.
 
-Technology Used
+
 =====================================
+Technology Used
+
 Ruby
 Rails
 Javascript
