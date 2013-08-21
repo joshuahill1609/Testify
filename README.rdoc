@@ -1,10 +1,7 @@
-Notes: nested_form gem requires this set-up in assest pipeline:
+Test-ify
+=========
+The simplest way to build and manage your tests.
+------------------------------------------------
+Test-ify is a rails web application that allows teachers to create, edit, print and save their tests.
 
-application.js - //= require jquery
-                 //= require jquery_nested_form
-                 //= require jquery_ujs
-
-assests/javascripts - application.js (no nested_form.js or jquery_nested_form or anything else)
-
-with out this set up the link_to_add will stop working.
 
