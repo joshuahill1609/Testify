@@ -1,5 +1,4 @@
-=====================================
-Test-ify
+= Test-ify
 
 I started building Test-ify as my capstone project while at App Academy. The idea came in college
 while taking a test that had been built and formatted using microsoft word and I thought there had
