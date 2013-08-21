@@ -9,9 +9,7 @@ can be saved with an account and reused for next semester or next year without h
 saved it on your computer. Give it test drive at test-ify.com. 
 Use- username: testguy, password: testguy, if you would like to bypass the sign up process.
 
-
-=====================================
-Technology Used
+= Technology Used
 
 Ruby
 Rails
@@ -26,13 +24,13 @@ Bcrypt - for user password security
 Acts As List - to aid in ordering the test questions. 
 
 
-ToDo
-======================================
-Fix pdf formatting.
-Change design to make question Drag & Drop in test builder user friendly.
-Change CSS sizing on sign up page.
-Change user management over to Devise.
-Add facebook logoin usiing OmniAuth.
+= ToDo
+
++ Fix pdf formatting.
++ Change design to make question Drag & Drop in test builder user friendly.
++ Change CSS sizing on sign up page.
++ Change user management over to Devise.
++ Add facebook logoin usiing OmniAuth.
 
 
 
