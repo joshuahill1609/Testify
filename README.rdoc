@@ -1,7 +1,36 @@
 Test-ify
-=========
-The simplest way to build and manage your tests.
-------------------------------------------------
-Test-ify is a rails web application that allows teachers to create, edit, print and save their tests.
+=====================================
+I started building Test-ify as my capstone project while at App Academy. The idea came in college
+while taking a test that had been built and formatted using microsoft word and I thought there had
+to be an easier way. Test-ify is designed to be the best possible way for teachers to manage their tests. 
+Test-ify provides a test builder interface for easily adding multiple choice, true/false, or essay questions. 
+Users can change the order of questions, print the test and print a answer key for easy grading. All tests 
+can be saved with an account and reused for next semester or next year without having to remember where you 
+saved it on your computer. Give it test drive at test-ify.com. 
+Use- username: testguy, password: testguy, if you would like to bypass the sign up process.
+
+Technology Used
+=====================================
+Ruby
+Rails
+Javascript
+Ajax
+HTML
+CSS
+PostgreSQL
+
+Prawn - for pdf printing.
+Bcrypt - for user password security
+Acts As List - to aid in ordering the test questions. 
+
+
+ToDo
+======================================
+Fix pdf formatting.
+Change design to make question Drag & Drop in test builder user friendly.
+Change CSS sizing on sign up page.
+Change user management over to Devise.
+Add facebook logoin usiing OmniAuth.
+
 
 
