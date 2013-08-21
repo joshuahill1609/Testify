@@ -11,17 +11,16 @@ Use- username: testguy, password: testguy, if you would like to bypass the sign 
 
 = Technology Used
 
-Ruby
-Rails
-Javascript
-Ajax
-HTML
-CSS
-PostgreSQL
-
-Prawn - for pdf printing.
-Bcrypt - for user password security
-Acts As List - to aid in ordering the test questions. 
+*Ruby
+*Rails
+*Javascript
+*Ajax
+*HTML
+*CSS
+*PostgreSQL
+*Prawn - for pdf printing.
+*Bcrypt - for user password security
+*Acts As List - to aid in ordering the test questions. 
 
 
 = ToDo
