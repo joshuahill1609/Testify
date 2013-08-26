@@ -7,7 +7,7 @@ Test-ify provides a test builder interface for easily adding multiple choice, tr
 Users can change the order of questions, print the test and print a answer key for easy grading. All tests 
 can be saved with an account and reused for next semester or next year without having to remember where you 
 saved it on your computer. Give it test drive at www.test-ify.com. 
-Use- username: testguy, password: testguy, if you would like to bypass the sign up process.
+Use username: testguy, password: testguy, if you would like to bypass the sign up process.
 
 = Technology Used
 
