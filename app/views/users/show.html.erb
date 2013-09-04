@@ -8,14 +8,16 @@
 <div class="profile-container group">
   <h1>Hey <%= @user.username.capitalize %>! </h1>
 
-  <p>Your tests:</p>
+  <p>Your tests</p>
   <ul>
     <% @exams.each do |exam| %>
       <li>
         <a href="/exams/<%= exam.id %>">
-        Test Name: <%= exam.exam_name %><br>Subject: <%= exam.exam_subject %>,
-        Created By: <%= exam.user.username %>, 
-        Last Updated: <%= exam.updated_at.strftime("%D") %>
+        <span><%= exam.exam_name %></span><br>
+        <span>Subject: <%= exam.exam_subject %>,</span>
+        <span>Created By: <%= exam.user.username %>,</span> 
+        <span>Last Updated: <%= exam.updated_at.strftime("%D")
+          %></span>
         </a>
       </li><br>
     <% end %>

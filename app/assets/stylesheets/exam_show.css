@@ -129,6 +129,15 @@
   padding: 10px;
 }
 
+.tag-title {
+  font-weight: bold;
+  color: #A2AB58;
+  padding-left: 0px;
+  display: block;
+  font-family: arial;
+}
+
+
 .tag-show {
   display: block;
   font-family: arial;

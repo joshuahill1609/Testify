@@ -78,16 +78,28 @@
 	margin-top: 10px;
 }
 .profile-container > ul > li {
-	background: rgba(103, 188, 219, 0.90);
-	width: 80%;
-	border-radius: 4px;
+	width: 85%;
 	padding: 8px;
+  border-bottom: 1px solid #AAA;
 }
 
 .profile-container > ul > li > a {
-	color: white;
+	color: #AAA;
 	font-family: arial;
-	font-size: 18px;
+}
+
+.profile-container > ul > li > a > span:first-child {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.profile-container > ul > li:hover > a > span:first-child {
+  color: #A2AB58;
+}
+
+.profile-container > ul > li > a > span {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .profile-container > p {
@@ -100,5 +112,5 @@
     background-color: #E44424;
     padding:3px;
     padding-left: 5px;
-	margin-left: 15px;
+	  margin-left: 15px;
 }

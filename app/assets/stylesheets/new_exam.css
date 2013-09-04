@@ -2,6 +2,8 @@
 
 .build-test-container {
   width: 70%;
+  max-width: 750px;
+  min-width: 600px;
   float: left;
   margin-left: 55px;
   margin-top: 20px;
@@ -37,7 +39,16 @@
 }
 
 .actions > input[type=submit] {
-  display: none;
+  display: block;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 150px;
+  font-family: arial;
+  font-size: 15px;
+  color: white;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
+  border-radius: 5px;
 }
 
 /* Add Question Nav Bar */
@@ -252,6 +263,7 @@
 
 .tags-container {
   display: inline-block;
+  position: fixed;
   margin: 20px 0 0 40px;
   width: 150px;
   box-shadow: 10px 10px 10px #888888;

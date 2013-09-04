@@ -12,7 +12,7 @@
 
 .search-sub-nav {
   width: 100%;
-  background: #A2AB58;
+  background: #67BCDB;
 }
 
 .search > form {
@@ -43,6 +43,10 @@
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E44424), to(#F06C41));
 }
 
+.search > form > input[type=submit]:hover {
+  background: #E44424;
+  cursor: pointer;
+}
 
 /* Exams Container */
 
@@ -52,8 +56,8 @@
 }
 .exams-container > ul > li {
 	width: 85%;
-	border-radius: 4px;
 	padding: 8px;
+  border-bottom: 1px solid #AAA;
 }
 
 .exams-container > ul > li > a {
@@ -66,7 +70,13 @@
   font-weight: bold;
 }
 
+.exams-container > ul > li:hover > a > span:first-child {
+  color: #A2AB58;
+}
+
 .exams-container > ul > li > a > span {
   font-weight: bold;
   font-size: 18px;
 }
+
+

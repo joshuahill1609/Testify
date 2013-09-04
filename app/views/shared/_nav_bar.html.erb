@@ -12,7 +12,7 @@
       <li><a href="<%= exams_url %>">Explore</a></li>
       <li>
       <% if current_user %>
-        <%= button_to "Log Out", session_url(current_user),
+        <%= link_to "Log Out", session_url(current_user),
           method: "delete"%>
       <% else %>
       <%= link_to "Sign Up", "#", class: "sign-up sign-up-page"%>

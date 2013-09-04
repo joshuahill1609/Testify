@@ -8,20 +8,13 @@ class ExamPdf < Prawn::Document
     @current_user = current_user
     @num_of_questions = 1
     exam_name
-    subject
     student_header
     place_questions
     place_footer
   end
 
   def exam_name
-     text "Test Name: #{@exam.exam_name.capitalize}", size: 20, style: :bold
-  end
-
-  def subject
-    move_down 5
-
-    text "Teacher: #{@current_user.username.capitalize} Subject: #{@exam.exam_subject}", size: 10
+     text "#{@exam.exam_name.capitalize}", size: 20, style: :bold
   end
 
   def student_header
@@ -55,6 +48,12 @@ class ExamPdf < Prawn::Document
       
       @num_of_questions += 1
     end
+    
+  end
+  
+  def place_answers(question)
+    move_down 5
+    j = 0
     
   end
 

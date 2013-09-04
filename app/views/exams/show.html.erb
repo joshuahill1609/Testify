@@ -65,11 +65,13 @@
 
 </div>
 
+<% if @exam.tags %>
 <div class="tags-container-show">
 	<ul>
+    <li class="tag-title">TAGS</li>
 	  <% @exam.tags.each do |tag| %>
 		  <li class="tag-show"><%= tag.tag_title %></li>
 		<% end %>
  </ul>
 </div>
-
+<% end %>
