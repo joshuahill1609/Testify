@@ -1,10 +1,35 @@
-Notes: nested_form gem requires this set-up in assest pipeline:
+= Test-ify
 
-application.js - //= require jquery
-                 //= require jquery_nested_form
-                 //= require jquery_ujs
+I started building Test-ify as my capstone project while at App Academy. The idea came in college
+while taking a test that had been built and formatted using microsoft word and I thought there had
+to be an easier way. Test-ify is designed to be the best possible way for teachers to manage their tests. 
+Test-ify provides a test builder interface for easily adding multiple choice, true/false, or essay questions. 
+Users can change the order of questions, print the test and print a answer key for easy grading. All tests 
+can be saved with an account and reused for next semester or next year without having to remember where you 
+saved it on your computer. Give it test drive at www.test-ify.com. 
+Use username: testguy, password: testguy, if you would like to bypass the sign up process.
 
-assests/javascripts - application.js (no nested_form.js or jquery_nested_form or anything else)
+= Technology Used
 
-with out this set up the link_to_add will stop working.
+* Ruby
+* Rails
+* Javascript
+* Ajax
+* HTML
+* CSS
+* PostgreSQL
+* Prawn - for pdf printing
+* Bcrypt - for user password security
+* Acts As List - to aid in ordering the test questions 
+
+
+= ToDo
+
+* Fix pdf formatting.
+* Change design to make question Drag & Drop in test builder user friendly.
+* Change CSS sizing on sign up page.
+* Change user management over to Devise.
+* Add facebook logoin usiing OmniAuth.
+
+
 
