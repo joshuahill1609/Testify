@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    redirect_to "/users/#{current_user.id}"
   end
 
   def new
