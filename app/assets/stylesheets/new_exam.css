@@ -209,6 +209,18 @@
   font-weight: bold;
 }
 
+.drag {
+  float: right;
+  color: #A2AB58;
+  font-family: arial;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 10px 0 0;
+  cursor: move;
+}
+
 /* Multiple choice question */
 
 .correct-answer > label{

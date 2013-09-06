@@ -23,21 +23,6 @@ $(document).ready(function(){
 		return false;
 	})
 
-	
-  // toggle classes for main nav bar
-	$(".log-in").click(function(){
-		$(".log-in").toggleClass("log-in-page")
-		$(".sign-up").toggleClass("sign-up-page")
-		$(".sign-up-form").toggleClass("log-in-page-toggle")
-		$(".log-in-form").toggleClass("sign-up-page-toggle")		
-	})
-	
-	$(".sign-up").click(function(){
-		$(".log-in").toggleClass("log-in-page")
-		$(".sign-up").toggleClass("sign-up-page")
-		$(".sign-up-form").toggleClass("log-in-page-toggle")
-		$(".log-in-form").toggleClass("sign-up-page-toggle")
-	})
   
   //toggle add question nav bar on new_exam_url
   
