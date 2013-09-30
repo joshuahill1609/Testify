@@ -36,6 +36,50 @@ class ExamsController < ApplicationController
       render :new
     end
   end
+  
+  #shuffles around the order of questions creating a new version of the test
+  def new_version
+    @old_exam = Exam.find(params[:id])
+    @exam = Exam.new(@old_exam.attributes.merge({:id => nil, :created_at => nil, :updated_at => nil}))
+    @exam.exam_name = @old_exam.exam_name + " v.2"
+    @exam.save
+    
+    @old_exam.questions.each do |question|
+      rand = 1 + rand(40)
+      new_question = Question.new(exam_id: @exam.id, title: question.title, position: rand)
+      new_question.save
+      
+      question.correct_answers.each do |correct_answer|
+        new_correct_answer = CorrectAnswer.new(question_id: new_question.id, body: correct_answer.body)
+        new_correct_answer.save
+      end
+      
+      question.answer_orders.each do |answer_order|
+        new_answer_order = AnswerOrder.new(content: answer_order.content, question_id: new_question.id)
+        new_answer_order.save
+      end
+    end
+    
+    @old_exam.true_false_questions.each do |tf_question|
+      rand = 1 + rand(40)
+      new_tf = TrueFalseQuestion.new(content: tf_question.content, exam_id: @exam.id, position: rand)
+      new_tf.save
+      
+      tf_question.true_false_answers.each do |tf_answer|
+        new_tf_answer = TrueFalseAnswer.new(content: tf_answer.content, true_false_question_id: new_tf.id)
+        new_tf_answer.save
+      end
+    end
+    
+    @old_exam.essay_questions.each do |essay|
+      rand = 1 + rand(40)
+      new_essay = EssayQuestion.new(content: essay.content, exam_id: @exam.id, position: rand)
+      new_essay.save
+    end
+    
+    redirect_to exams_url
+  
+  end
 
   def show
     @exam = Exam.find(params[:id])

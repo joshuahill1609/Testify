@@ -5,6 +5,7 @@ Testify::Application.routes.draw do
   resources :exams do
     member do
       get 'answer_key'
+      get 'new_version'
     end
   end
 

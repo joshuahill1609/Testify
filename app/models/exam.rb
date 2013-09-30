@@ -1,6 +1,6 @@
 class Exam < ActiveRecord::Base
   attr_accessible :exam_name, :exam_subject, :user_id, :questions_attributes, :true_false_questions_attributes, :essay_questions_attributes, 
-                  :tag_ids, :grade_level_ids
+                  :tag_ids, :grade_level_ids, :id, :created_at, :updated_at
 
   validates :exam_name, :user_id, presence: true
 
