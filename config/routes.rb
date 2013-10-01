@@ -1,7 +1,12 @@
 Testify::Application.routes.draw do
   devise_for :users
 
-  resources :users
+  resources :users do
+    member do
+      get 'about'
+    end
+  end
+  
   resources :exams do
     member do
       get 'answer_key'

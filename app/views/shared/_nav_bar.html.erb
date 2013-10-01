@@ -10,6 +10,7 @@
         <li><a href="<%= user_url(current_user.id) %>">Me</a></li>
       <% end %>
       <li><a href="<%= exams_url %>">Explore</a></li>
+      <li><a href="<%= about_user_url(1) %>">About</a></li>
       <li>
       <% if user_signed_in? %>
         <%= link_to "Log Out", destroy_user_session_path, method: :delete %>

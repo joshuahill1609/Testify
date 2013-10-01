@@ -29,6 +29,10 @@ class UsersController < ApplicationController
       redirect_to new_user_url
     end
   end
+  
+  def about
+    
+  end
 
   def destroy
 
