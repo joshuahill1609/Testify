@@ -1,6 +1,6 @@
 class ExamPdf < Prawn::Document
 
-  LETTERS = ["B", "C", "D", "E", "F"]
+  LETTERS = ["A", "B", "C", "D", "E", "F"]
 
   def initialize(exam, current_user)
     super()
