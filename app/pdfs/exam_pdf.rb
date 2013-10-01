@@ -10,7 +10,6 @@ class ExamPdf < Prawn::Document
     exam_name
     student_header
     place_questions
-    place_footer
   end
 
   def exam_name
@@ -28,6 +27,7 @@ class ExamPdf < Prawn::Document
     @exam.questions.each do |question|
       move_down 10
       text @num_of_questions.to_s + ") " + "#{question.title}"
+      move_down 5
       place_correct_answer(question)
       place_answers(question)
 
@@ -37,29 +37,30 @@ class ExamPdf < Prawn::Document
     @exam.true_false_questions.each do |question|
       move_down 10
       text @num_of_questions.to_s + ") " + "#{question.content}"
-      text "___ True ___ False"
+      indent(20) do
+        text "___ True ___ False"
+      end
       
       @num_of_questions += 1
     end
     
+    start_new_page
+    text "Essay Questions. Write answer in space provided."
+    move_down 10
     @exam.essay_questions.each do |question|
-      move_down 10
       text @num_of_questions.to_s + ") " + "#{question.content}"
+      move_down 150
       
       @num_of_questions += 1
     end
-    
-  end
-  
-  def place_answers(question)
-    move_down 5
-    j = 0
     
   end
 
   def place_correct_answer(question)
     move_down 5
-    text "A) " + "#{question.correct_answers.first.body}"
+    indent(20) do
+      text "A) " + "#{question.correct_answers.first.body}"
+    end
   end
 
 
@@ -67,7 +68,9 @@ class ExamPdf < Prawn::Document
     j = 0
     question.answers.each do |answer|
       move_down 5
-      text "#{LETTERS[j]}" + ") " + "#{answer.body}"
+      indent(20) do
+        text "#{LETTERS[j]}" + ") " + "#{answer.body}"
+      end
       j += 1
     end
   end
