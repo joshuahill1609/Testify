@@ -77,7 +77,7 @@ class ExamsController < ApplicationController
       new_essay.save
     end
     
-    redirect_to exams_url
+    redirect_to @exam
   
   end
 

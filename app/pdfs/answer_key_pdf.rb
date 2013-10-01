@@ -14,8 +14,7 @@ class AnswerKeyPdf < Prawn::Document
   end
 
   def exam_name
-     text "Answer Key"
-     text "Test Name: #{@exam.exam_name.capitalize}", size: 20, style: :bold
+     text "Answer Key For: #{@exam.exam_name.capitalize}", size: 20, style: :bold
   end
 
   def subject

@@ -28,7 +28,6 @@ class ExamPdf < Prawn::Document
       move_down 10
       text @num_of_questions.to_s + ") " + "#{question.title}"
       move_down 5
-      place_correct_answer(question)
       place_answers(question)
 
       @num_of_questions += 1
@@ -56,6 +55,7 @@ class ExamPdf < Prawn::Document
     
   end
 
+  #not using - switched this out for place_answers method
   def place_correct_answer(question)
     move_down 5
     indent(20) do
@@ -66,15 +66,16 @@ class ExamPdf < Prawn::Document
 
   def place_answers(question)
     j = 0
-    question.answers.each do |answer|
+    question.answer_orders.each do |answer|
       move_down 5
       indent(20) do
-        text "#{LETTERS[j]}" + ") " + "#{answer.body}"
+        text "#{LETTERS[j]}" + ") " + "#{answer.content}"
       end
       j += 1
     end
   end
 
+  #not using - will impliment later
   def place_footer
     text_box "____ / #{@num_of_questions - 1}", valign: :bottom
   end
