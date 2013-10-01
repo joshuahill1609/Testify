@@ -38,7 +38,10 @@ class AnswerKeyPdf < Prawn::Document
     @exam.true_false_questions.each do |question|
       move_down 10
       text @num_of_questions.to_s + ") " + "#{question.content}"
-      text "#{question.true_false_answers.first.content}"
+      indent(20) do
+        move_down(5)
+        text "#{question.true_false_answers.first.content.capitalize}"
+      end
       
       @num_of_questions += 1
     end
@@ -46,6 +49,10 @@ class AnswerKeyPdf < Prawn::Document
     @exam.essay_questions.each do |question|
       move_down 10
       text @num_of_questions.to_s + ") " + "#{question.content}"
+      indent(20) do
+        move_down(5)
+        text "Essay Question"
+      end
       
       @num_of_questions += 1
     end
@@ -53,7 +60,9 @@ class AnswerKeyPdf < Prawn::Document
 
   def place_correct_answer(question)
     move_down 5
+    indent(20) do
      text "#{question.correct_answers.first.body}"
+   end
   end
 
 
